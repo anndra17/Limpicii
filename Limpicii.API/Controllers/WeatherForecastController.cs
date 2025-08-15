@@ -1,3 +1,4 @@
+using Limpicii.Infrastructure.Context;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Limpicii.API.Controllers
@@ -12,22 +13,19 @@ namespace Limpicii.API.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly LimpiciiDbContext _context;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, LimpiciiDbContext limpiciiDbContext)
         {
             _logger = logger;
+            _context = limpiciiDbContext;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        public IActionResult Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            var model = _context.TennisCourts.ToList();
+            return Ok(model);
         }
     }
 }

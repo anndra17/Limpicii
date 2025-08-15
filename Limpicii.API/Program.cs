@@ -1,3 +1,6 @@
+using Limpicii.Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Limpicii.API
 {
@@ -5,6 +8,8 @@ namespace Limpicii.API
     {
         public static void Main(string[] args)
         {
+
+            #region Configurating Services - Start
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -12,7 +17,20 @@ namespace Limpicii.API
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
+            // Add database context
+            builder.Configuration.AddEnvironmentVariables();
 
+            builder.Services.AddDbContext<LimpiciiDbContext>(options =>
+            {
+                options.UseSqlServer(
+                    builder.Configuration.GetConnectionString("DefaultConnection"),
+                    providerOptions => providerOptions.EnableRetryOnFailure() 
+                    );
+            });
+
+            #endregion Configurating Services - End
+
+            #region Configurating Middleware - Start
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -28,7 +46,11 @@ namespace Limpicii.API
 
             app.MapControllers();
 
+            app.MapGet("/", () => "Hello Limpicii!");
+
+
             app.Run();
+            #endregion Configurating Middleware - End
         }
     }
 }
