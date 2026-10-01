@@ -1,27 +1,43 @@
-# Limpicii
+# Limpicii frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+The frontend is an Angular 17 standalone application styled with Tailwind CSS 4.
 
-## Development server
+## Requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Node.js (Node.js 20 LTS is recommended for Angular 17).
+- npm (the version bundled with Node.js is sufficient).
 
-## Code scaffolding
+## Install and run
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+From this directory (`Frontend/Limpicii`):
 
-## Build
+```powershell
+npm ci
+npm start
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Open [http://localhost:4200/](http://localhost:4200/). The Angular dev server reloads when source files change. Stop it with `Ctrl+C` in the terminal.
 
-## Running unit tests
+## Available commands
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+| Command | Description |
+| --- | --- |
+| `npm start` | Run the local Angular development server |
+| `npm run build` | Build the production application into `dist/limpicii` |
+| `npm run watch` | Rebuild continuously with the development configuration |
+| `npm test` | Run the Karma unit tests |
 
-## Running end-to-end tests
+Install dependencies with `npm ci` after cloning the repository or when the lockfile changes. This installs the exact versions from `package-lock.json`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## API configuration
 
-## Further help
+The development API base URL is in `src/environments/environment.ts` and currently points to `https://localhost:7050/api`. The production base URL is in `src/environments/environment.prod.ts`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The current backend exposes `GET /WeatherForecast` without the `/api` prefix, while the frontend service requests `/api/weatherforecast`. The backend also does not currently configure CORS for the frontend origin. Align the route and configure CORS in the API before relying on browser requests between the apps. See the [backend documentation](../../Backend/Limpicii.API/README.md) and the [repository setup guide](../../README.md).
+
+## Troubleshooting
+
+- If `ng` is not found, run `npm ci` in this directory and then use `npm start` (which runs the local Angular CLI).
+- If port 4200 is already in use, stop the other dev server or run `npm start -- --port 4201`.
+- If the API call fails, confirm the backend is running, check the configured URL and route, and check that the backend allows requests from `http://localhost:4200`.
+- The checked-in project uses TypeScript 5.2.2 through its lockfile. In VS Code, select the workspace TypeScript version if diagnostics from a different global TypeScript version disagree with the Angular CLI build.
