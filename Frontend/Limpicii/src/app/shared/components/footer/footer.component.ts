@@ -20,17 +20,17 @@ export class FooterComponent {
 	readonly contactLinks: FooterContactLink[] = [
 		{
 			label: 'Telefon',
-			value: '+40 700 000 000',
-			href: 'tel:+40000000000'
+			value: '+40 721 814 747',
+			href: 'tel:+40721814747'
 		},
 		{
 			label: 'E-mail',
-			value: 'contact@limpicii.com',
-			href: 'mailto:contact@limpicii.com'
+			value: 'limpicii.bv@gmail.com',
+			href: 'mailto:limpicii.bv@gmail.com'
 		},
 		{
 			label: 'Facebook',
-			value: 'Asociația Sportivă Limpicii Brașov',
+			value: 'Limpicii',
 			href: 'https://www.facebook.com/limpicii',
 			external: true
 		}
