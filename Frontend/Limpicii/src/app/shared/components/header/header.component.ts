@@ -1,12 +1,12 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-	selector: 'app-header',
-	imports: [CommonModule],
-    standalone: true,
-	templateUrl: './header.component.html',
-	styleUrls: ['./header.component.css']
+    selector: 'app-header',
+    imports: [CommonModule],
+    templateUrl: './header.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 	images: string[] = [

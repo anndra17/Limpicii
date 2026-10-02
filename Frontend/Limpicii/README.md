@@ -1,11 +1,10 @@
 # Limpicii frontend
 
-The frontend is an Angular 17 standalone application styled with Tailwind CSS 4.
+The frontend is an Angular 22 standalone application styled with Tailwind CSS 4.
 
 ## Requirements
 
-- Node.js (Node.js 20 LTS is recommended for Angular 17).
-- npm (the version bundled with Node.js is sufficient).
+- Node.js `^22.22.3`, `^24.15.0`, or `^26.0.0` and npm (the version bundled with Node.js is sufficient).
 
 ## Install and run
 

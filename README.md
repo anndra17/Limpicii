@@ -6,7 +6,7 @@ Limpicii contains an Angular frontend and an ASP.NET Core Web API backed by SQL 
 
 | Path | Purpose |
 | --- | --- |
-| `Frontend/Limpicii` | Angular 17 application and static assets |
+| `Frontend/Limpicii` | Angular 22 application and static assets |
 | `Backend/Limpicii.API` | ASP.NET Core 9 API, controllers, OpenAPI endpoint, and launch profiles |
 | `Backend/Limpicii.Application` | Application layer |
 | `Backend/Limpicii.Domain` | Domain entities and enums |
@@ -14,7 +14,7 @@ Limpicii contains an Angular frontend and an ASP.NET Core Web API backed by SQL 
 
 ## Prerequisites
 
-- Node.js and npm (Node.js 20 LTS is recommended for Angular 17).
+- Node.js and npm. Angular 22 supports Node.js `^22.22.3`, `^24.15.0`, or `^26.0.0`.
 - .NET 9 SDK.
 - SQL Server (local, containerized, or remote) and a database for the API.
 

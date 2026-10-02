@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface FooterContactLink {
@@ -9,10 +9,10 @@ interface FooterContactLink {
 }
 
 @Component({
-	selector: 'app-footer',
-	standalone: true,
-	imports: [CommonModule],
-	templateUrl: './footer.component.html'
+    selector: 'app-footer',
+    imports: [CommonModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    templateUrl: './footer.component.html'
 })
 export class FooterComponent {
 	readonly currentYear = new Date().getFullYear();
