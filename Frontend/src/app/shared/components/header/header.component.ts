@@ -1,9 +1,10 @@
 import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
     selector: 'app-header',
-    imports: [CommonModule],
+    imports: [CommonModule, TranslatePipe],
     templateUrl: './header.component.html',
     changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./header.component.css']

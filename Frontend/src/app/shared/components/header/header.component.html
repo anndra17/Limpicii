@@ -1,39 +1,39 @@
 <header id="top" class="relative w-full h-84 flex items-center justify-center overflow-hidden  shadow-xl">
-	<img [src]="images[currentImage]" alt="Header image" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000" [class.opacity-0]="!showImage" [class.opacity-100]="showImage">
+	<img [src]="images[currentImage]" alt="{{ 'HEADER.IMAGE_ALT' | translate }}" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000" [class.opacity-0]="!showImage" [class.opacity-100]="showImage">
 	<div class="relative z-10 text-center">
-			<h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-2xl tracking-wide">Bine ai venit la Limpicii!</h1>
-			<p class="mt-2 text-lg md:text-xl text-white drop-shadow-lg font-semibold">Descoperă activitățile noastre în natură</p>
+			<h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-2xl tracking-wide">{{ 'HEADER.TITLE' | translate }}</h1>
+			<p class="mt-2 text-lg md:text-xl text-white drop-shadow-lg font-semibold">{{ 'HEADER.SUBTITLE' | translate }}</p>
 	</div>
 	<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
 		<span *ngFor="let img of images; let i = index" class="w-3 h-3 rounded-full bg-white/70 border border-white transition-all duration-300" [class.bg-yellow-400]="i === currentImage"></span>
 	</div>
 		<div class="absolute inset-0 bg-black/40"></div>
 </header>
-<section id="activitati" class="w-full bg-white py-6">
+<section id="activitati" class="w-full bg-white py-6" aria-label="{{ 'ACTIVITIES.SECTION' | translate }}">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-wrap md:flex-nowrap gap-2 md:gap-8 justify-between items-center">
 			<div class="flex flex-col items-center flex-1">
-				<img src="assets/icons/tennisIcon.png" alt="Tenis" class="w-10 h-10 md:w-16 md:h-16 object-contain" />
-				<span class="mt-1 text-xs md:text-lg font-semibold text-gray-700">Tenis</span>
+				<img src="assets/icons/tennisIcon.png" alt="{{ 'ACTIVITIES.TENNIS' | translate }}" class="w-10 h-10 md:w-16 md:h-16 object-contain" />
+				<span class="mt-1 text-xs md:text-lg font-semibold text-gray-700">{{ 'ACTIVITIES.TENNIS' | translate }}</span>
 			</div>
 			<div class="flex flex-col items-center flex-1">
-				<img src="assets/icons/skiIcon.png" alt="Schi" class="w-10 h-10 md:w-16 md:h-16 object-contain" />
-				<span class="mt-1 text-xs md:text-lg font-semibold text-gray-700">Schi</span>
+				<img src="assets/icons/skiIcon.png" alt="{{ 'ACTIVITIES.SKI' | translate }}" class="w-10 h-10 md:w-16 md:h-16 object-contain" />
+				<span class="mt-1 text-xs md:text-lg font-semibold text-gray-700">{{ 'ACTIVITIES.SKI' | translate }}</span>
 			</div>
 			<div class="flex flex-col items-center flex-1">
-				<img src="assets/icons/swimIcon.png" alt="Înot" class="w-10 h-10 md:w-16 md:h-16 object-contain" />
-				<span class="mt-1 text-xs md:text-lg font-semibold text-gray-700">Înot</span>
+				<img src="assets/icons/swimIcon.png" alt="{{ 'ACTIVITIES.SWIMMING' | translate }}" class="w-10 h-10 md:w-16 md:h-16 object-contain" />
+				<span class="mt-1 text-xs md:text-lg font-semibold text-gray-700">{{ 'ACTIVITIES.SWIMMING' | translate }}</span>
 			</div>
 			<div class="flex flex-col items-center flex-1">
-				<img src="assets/icons/hikingIcon.png" alt="Drumeție" class="w-10 h-10 md:w-16 md:h-16 object-contain" />
-				<span class="mt-1 text-xs md:text-lg font-semibold text-gray-700">Drumeție</span>
+				<img src="assets/icons/hikingIcon.png" alt="{{ 'ACTIVITIES.HIKING' | translate }}" class="w-10 h-10 md:w-16 md:h-16 object-contain" />
+				<span class="mt-1 text-xs md:text-lg font-semibold text-gray-700">{{ 'ACTIVITIES.HIKING' | translate }}</span>
 			</div>
 			<div class="flex flex-col items-center flex-1">
-				<img src="assets/icons/iceskateingIcon.png" alt="Patinaj" class="w-10 h-10 md:w-16 md:h-16 object-contain" />
-				<span class="mt-1 text-xs md:text-lg font-semibold text-gray-700">Patinaj</span>
+				<img src="assets/icons/iceskateingIcon.png" alt="{{ 'ACTIVITIES.SKATING' | translate }}" class="w-10 h-10 md:w-16 md:h-16 object-contain" />
+				<span class="mt-1 text-xs md:text-lg font-semibold text-gray-700">{{ 'ACTIVITIES.SKATING' | translate }}</span>
 			</div>
 			<div class="flex flex-col items-center flex-1">
-				<img src="assets/icons/gymnasticsIcon.png" alt="Gimnastică" class="w-10 h-10 md:w-16 md:h-16 object-contain" />
-				<span class="mt-1 text-xs md:text-lg font-semibold text-gray-700">Gimnastică</span>
+				<img src="assets/icons/gymnasticsIcon.png" alt="{{ 'ACTIVITIES.GYMNASTICS' | translate }}" class="w-10 h-10 md:w-16 md:h-16 object-contain" />
+				<span class="mt-1 text-xs md:text-lg font-semibold text-gray-700">{{ 'ACTIVITIES.GYMNASTICS' | translate }}</span>
 			</div>
 	</div>
 </section>
@@ -43,21 +43,21 @@
 		<div class="max-w-2xl">
 			<p class="mb-4 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-emerald-800">
 				<span aria-hidden="true" class="h-2 w-2 rounded-full bg-amber-400"></span>
-				Asociația Club Sportiv Limpicii Brașov
+				{{ 'ABOUT.ORGANIZATION' | translate }}
 			</p>
 			<h2 id="about-title" class="text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl">
-				Sport, aventură și <span class="text-emerald-800">bucuria de a fi împreună.</span>
+				{{ 'ABOUT.TITLE_START' | translate }} <span class="text-emerald-800">{{ 'ABOUT.TITLE_END' | translate }}</span>
 			</h2>
 			<div class="mt-6 space-y-4 text-base leading-8 text-slate-600 sm:text-lg">
 				<p>
-					În Brașov, Limpicii aduc copiii împreună prin mișcare și experiențe în natură. De la înot, tenis și gimnastică, la schi, patinaj și drumeții, fiecare activitate e un prilej de descoperire și de timp petrecut în echipă.
+					{{ 'ABOUT.PARAGRAPH_ONE' | translate }}
 				</p>
 				<p>
-					Aici, bucuria unei reușite se împarte, prieteniile cresc firesc, iar fiecare ieșire adaugă o poveste nouă. Limpicii — întotdeauna o echipă!
+					{{ 'ABOUT.PARAGRAPH_TWO' | translate }}
 				</p>
 			</div>
 			<a href="#activitati" class="mt-8 inline-flex items-center gap-3 rounded-full bg-emerald-800 px-6 py-3 font-semibold text-white shadow-lg shadow-emerald-950/15 transition hover:-translate-y-0.5 hover:bg-emerald-900 focus:outline-none focus:ring-2 focus:ring-emerald-700 focus:ring-offset-2">
-				Descoperă activitățile
+				{{ 'ABOUT.ACTIVITIES_LINK' | translate }}
 				<svg aria-hidden="true" class="h-4 w-4" viewBox="0 0 20 20" fill="none">
 					<path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
 				</svg>
@@ -69,12 +69,12 @@
 			<div class="relative overflow-hidden rounded-3xl shadow-2xl shadow-emerald-950/15 ring-1 ring-black/5">
 				<img
 					src="assets/images/LimpiciiTurneuTenis2026.jpg"
-					alt="Membrii clubului Limpicii, împreună pe un teren de tenis"
+					alt="{{ 'ABOUT.IMAGE_ALT' | translate }}"
 					class="aspect-[4/3] w-full object-cover object-center"
 					loading="lazy"
 				/>
 				<figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-transparent px-6 pb-6 pt-16 text-lg font-semibold text-white sm:px-8 sm:pb-8">
-					Întotdeauna o echipă.
+					{{ 'ABOUT.CAPTION' | translate }}
 				</figcaption>
 			</div>
 		</figure>
@@ -84,35 +84,35 @@
 <section id="sports-facility" aria-labelledby="sports-facility-title" class="bg-white py-16 sm:py-20 lg:py-24">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="mx-auto max-w-3xl text-center">
-			<p class="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-emerald-800">Locul în care ne întâlnim</p>
+			<p class="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-emerald-800">{{ 'FACILITY.EYEBROW' | translate }}</p>
 			<h2 id="sports-facility-title" class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
-				Baza noastră sportivă din Hălchiu
+				{{ 'FACILITY.TITLE' | translate }}
 			</h2>
 			<p class="mt-6 text-base leading-8 text-slate-600 sm:text-lg">
-				La Hălchiu avem o bază sportivă primitoare, cu trei terenuri de tenis, două vestiare dotate cu dușuri și toaletă, precum și o tribună pentru susținători.
+				{{ 'FACILITY.DESCRIPTION' | translate }}
 			</p>
 		</div>
 
 		<div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 			<article class="rounded-2xl border border-emerald-950/10 bg-[#f5f6f1] p-6 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-950/10">
 				<p class="text-4xl font-extrabold tracking-tight text-emerald-800">03</p>
-				<h3 class="mt-3 text-lg font-bold text-slate-900">Terenuri de tenis</h3>
-				<p class="mt-2 text-sm leading-6 text-slate-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<h3 class="mt-3 text-lg font-bold text-slate-900">{{ 'FACILITY.COURTS' | translate }}</h3>
+				<p class="mt-2 text-sm leading-6 text-slate-600">{{ 'FACILITY.COURTS_DESCRIPTION' | translate }}</p>
 			</article>
 			<article class="rounded-2xl border border-emerald-950/10 bg-[#f5f6f1] p-6 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-950/10">
 				<p class="text-4xl font-extrabold tracking-tight text-emerald-800">02</p>
-				<h3 class="mt-3 text-lg font-bold text-slate-900">Vestiare</h3>
-				<p class="mt-2 text-sm leading-6 text-slate-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<h3 class="mt-3 text-lg font-bold text-slate-900">{{ 'FACILITY.LOCKER_ROOMS' | translate }}</h3>
+				<p class="mt-2 text-sm leading-6 text-slate-600">{{ 'FACILITY.LOCKER_ROOMS_DESCRIPTION' | translate }}</p>
 			</article>
 			<article class="rounded-2xl border border-emerald-950/10 bg-[#f5f6f1] p-6 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-950/10">
 				<p class="text-4xl font-extrabold tracking-tight text-emerald-800">+</p>
-				<h3 class="mt-3 text-lg font-bold text-slate-900">Dușuri și toaletă</h3>
-				<p class="mt-2 text-sm leading-6 text-slate-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<h3 class="mt-3 text-lg font-bold text-slate-900">{{ 'FACILITY.SHOWERS' | translate }}</h3>
+				<p class="mt-2 text-sm leading-6 text-slate-600">{{ 'FACILITY.SHOWERS_DESCRIPTION' | translate }}</p>
 			</article>
 			<article class="rounded-2xl border border-emerald-950/10 bg-[#f5f6f1] p-6 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-950/10">
 				<p class="text-4xl font-extrabold tracking-tight text-emerald-800">+</p>
-				<h3 class="mt-3 text-lg font-bold text-slate-900">Tribună pentru susținători</h3>
-				<p class="mt-2 text-sm leading-6 text-slate-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<h3 class="mt-3 text-lg font-bold text-slate-900">{{ 'FACILITY.GRANDSTAND' | translate }}</h3>
+				<p class="mt-2 text-sm leading-6 text-slate-600">{{ 'FACILITY.GRANDSTAND_DESCRIPTION' | translate }}</p>
 			</article>
 		</div>
 	</div>

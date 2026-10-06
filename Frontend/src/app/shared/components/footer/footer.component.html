@@ -13,10 +13,10 @@
 			</div>
 
 			<div>
-				<h2 class="text-sm font-bold uppercase tracking-[0.18em] text-amber-300">Contact</h2>
+				<h2 class="text-sm font-bold uppercase tracking-[0.18em] text-amber-300">{{ 'NAV.CONTACT' | translate }}</h2>
 				<ul class="mt-5 space-y-4">
 					<li *ngFor="let contactLink of contactLinks" class="text-sm">
-						<span class="block text-xs font-semibold uppercase tracking-wider text-emerald-100/60">{{ contactLink.label }}</span>
+					<span class="block text-xs font-semibold uppercase tracking-wider text-emerald-100/60">{{ contactLink.label | translate }}</span>
 						<a
 							class="mt-1 inline-flex rounded-sm text-emerald-50 transition hover:text-amber-200 hover:underline focus:outline-none focus:ring-2 focus:ring-amber-300"
 							[href]="contactLink.href"
@@ -30,11 +30,11 @@
 			</div>
 
 			<div>
-				<h2 class="text-sm font-bold uppercase tracking-[0.18em] text-amber-300">Datele asociației</h2>
+				<h2 class="text-sm font-bold uppercase tracking-[0.18em] text-amber-300">{{ 'FOOTER.ORGANIZATION_DETAILS' | translate }}</h2>
 				<address class="mt-5 space-y-3 text-sm not-italic leading-6 text-emerald-50">
 					<p class="font-semibold">Asociaţia Club Sportiv Limpicii Braşov</p>
-					<p>str. Tablei nr. 1, Mun. Brașov, România</p>
-					<p><span class="font-semibold text-white">CUI:</span> 23731000</p>
+					<p>{{ 'FOOTER.ADDRESS' | translate }}</p>
+					<p><span class="font-semibold text-white">{{ 'FOOTER.TAX_ID' | translate }}</span> 23731000</p>
 				</address>
 			</div>
 		</div>
