@@ -31,15 +31,15 @@ jobs:
         with:
           node-version: 20.19.0
           cache: npm
-          cache-dependency-path: Frontend/Limpicii/package-lock.json
+          cache-dependency-path: Frontend/package-lock.json
 
       - name: Install frontend dependencies
         run: npm ci --legacy-peer-deps
-        working-directory: Frontend/Limpicii
+        working-directory: Frontend
 
       - name: Build Angular frontend
         run: npm run build -- --base-href /Limpicii/
-        working-directory: Frontend/Limpicii
+        working-directory: Frontend
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -47,7 +47,7 @@ jobs:
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: Frontend/Limpicii/dist/limpicii/browser
+          path: Frontend/dist/limpicii/browser
 
       - name: Deploy to GitHub Pages
         id: deployment
