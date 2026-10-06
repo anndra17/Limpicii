@@ -6,7 +6,7 @@ Limpicii contains an Angular frontend and an ASP.NET Core Web API backed by SQL 
 
 | Path | Purpose |
 | --- | --- |
-| `Frontend/Limpicii` | Angular 22 application and static assets |
+| `Frontend` | Angular 22 application and static assets |
 | `Backend/Limpicii.API` | ASP.NET Core 9 API, controllers, OpenAPI endpoint, and launch profiles |
 | `Backend/Limpicii.Application` | Application layer |
 | `Backend/Limpicii.Domain` | Domain entities and enums |
@@ -51,20 +51,20 @@ The repository contains an initial EF Core migration under `Backend/Limpicii.Inf
 In a second terminal:
 
 ```powershell
-cd Frontend/Limpicii
+cd Frontend
 npm ci
 npm start
 ```
 
-Open [http://localhost:4200/](http://localhost:4200/). `npm run build` creates a production build in `Frontend/Limpicii/dist/limpicii`.
+Open [http://localhost:4200/](http://localhost:4200/). `npm run build` creates a production build in `Frontend/dist/limpicii`.
 
 ## Frontend and API connection
 
-The frontend's development API base URL is `https://localhost:7050/api` in `Frontend/Limpicii/src/environments/environment.ts`. The backend controller currently exposes `GET /WeatherForecast` (port 7050 for HTTPS or port 5260 for HTTP). The frontend service requests `/api/weatherforecast`; these routes do not currently match. The API also has no CORS policy configured for the frontend origin. As a result, the frontend can run independently, but browser API calls need the API route, base URL, and CORS settings aligned before they can work end to end.
+The frontend's development API base URL is `https://localhost:7050/api` in `Frontend/src/environments/environment.ts`. The backend controller currently exposes `GET /WeatherForecast` (port 7050 for HTTPS or port 5260 for HTTP). The frontend service requests `/api/weatherforecast`; these routes do not currently match. The API also has no CORS policy configured for the frontend origin. As a result, the frontend can run independently, but browser API calls need the API route, base URL, and CORS settings aligned before they can work end to end.
 
 ## Further documentation
 
-- [Frontend setup and scripts](Frontend/Limpicii/README.md)
+- [Frontend setup and scripts](Frontend/README.md)
 - [Backend setup, configuration, and API notes](Backend/Limpicii.API/README.md)
 
 ## Current limitations

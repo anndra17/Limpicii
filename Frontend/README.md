@@ -8,7 +8,7 @@ The frontend is an Angular 22 standalone application styled with Tailwind CSS 4.
 
 ## Install and run
 
-From this directory (`Frontend/Limpicii`):
+From this directory (`Frontend`):
 
 ```powershell
 npm ci
