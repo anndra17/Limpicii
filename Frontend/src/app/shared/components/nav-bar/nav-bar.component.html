@@ -13,7 +13,6 @@
         <a href="#despre-noi" class="text-white px-3 py-1 rounded-lg font-semibold transition-all duration-200 hover:text-teal-300 hover:bg-white/20">{{ 'NAV.ABOUT' | translate }}</a>
         <a href="#activitati" class="text-white px-3 py-1 rounded-lg font-semibold transition-all duration-200 hover:text-teal-300 hover:bg-white/20">{{ 'NAV.ACTIVITIES' | translate }}</a>
         <a href="#contact" class="text-white px-3 py-1 rounded-lg font-semibold transition-all duration-200 hover:text-teal-300 hover:bg-white/20">{{ 'NAV.CONTACT' | translate }}</a>
-        <a href="#sports-facility" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold shadow-md transition-all duration-200 hover:bg-yellow-300 hover:scale-105">{{ 'NAV.BOOK_COURT' | translate }}</a>
         <div class="flex items-center gap-1 rounded-full bg-white/10 p-1" aria-label="{{ 'LANGUAGE.LABEL' | translate }}">
           <button type="button" (click)="setLanguage('ro')" [attr.aria-pressed]="translationService.language() === 'ro'" class="rounded-full px-2 py-1 text-xs font-bold text-white hover:bg-white/20">RO</button>
           <button type="button" (click)="setLanguage('en')" [attr.aria-pressed]="translationService.language() === 'en'" class="rounded-full px-2 py-1 text-xs font-bold text-white hover:bg-white/20">EN</button>
