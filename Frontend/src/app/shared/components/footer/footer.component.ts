@@ -6,6 +6,7 @@ interface FooterContactLink {
 	label: string;
 	value: string;
 	href: string;
+	icon: 'phone' | 'email' | 'facebook';
 	external?: boolean;
 }
 
@@ -22,18 +23,21 @@ export class FooterComponent {
 		{
 			label: 'FOOTER.PHONE',
 			value: '+40 721 814 747',
-			href: 'tel:+40721814747'
+			href: 'tel:+40721814747',  
+			icon: 'phone'
 		},
 		{
 			label: 'FOOTER.EMAIL',
 			value: 'limpicii.bv@gmail.com',
-			href: 'mailto:limpicii.bv@gmail.com'
+			href: 'mailto:limpicii.bv@gmail.com',
+			icon: 'email'
 		},
 		{
 			label: 'FOOTER.FACEBOOK',
 			value: 'Limpicii',
 			href: 'https://www.facebook.com/limpicii',
-			external: true
+			icon: 'facebook',
+			external: true,
 		}
 	];
 }
