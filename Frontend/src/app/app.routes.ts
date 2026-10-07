@@ -1,9 +1,12 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-
 
 export const routes: Routes = [
-  { path: 'weather', component: AppComponent },
-    { path: 'x', component: AppComponent }
-
+  { path: '',
+    pathMatch: 'full', 
+    loadComponent: () => 
+    import('./features/home/home-page.component')
+      .then((module) => module.HomePageComponent)
+    },
+    { path: '**', 
+      redirectTo: '' }
 ];
