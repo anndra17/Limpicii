@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  position: relative;
+  z-index: 20;
+  margin-bottom: -8px;
+}
+
+nav {
+  position: relative;
+  -webkit-mask:
+    linear-gradient(#000 0 0) top / 100% calc(100% - 8px) no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 8'%3E%3Cpath fill='black' d='M0 0h24v4c-3 0-3 4-6 4s-3-4-6-4-3 4-6 4-3-4-6-4z'/%3E%3C/svg%3E") bottom / 24px 8px repeat-x;
+  mask:
+    linear-gradient(#000 0 0) top / 100% calc(100% - 8px) no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 8'%3E%3Cpath fill='black' d='M0 0h24v4c-3 0-3 4-6 4s-3-4-6-4-3 4-6 4-3-4-6-4z'/%3E%3C/svg%3E") bottom / 24px 8px repeat-x;
+}
