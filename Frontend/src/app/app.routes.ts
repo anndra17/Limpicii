@@ -7,6 +7,11 @@ export const routes: Routes = [
     import('./features/home/home-page.component')
       .then((module) => module.HomePageComponent)
     },
+    { path: 'history',
+      loadComponent: () => 
+      import('./features/history/history-page.component')
+        .then((module) => module.HistoryPageComponent)
+    },
     { path: '**', 
       redirectTo: '' }
 ];
