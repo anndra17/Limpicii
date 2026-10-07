@@ -1,11 +1,11 @@
 <header id="top" class="relative w-full h-84 flex items-center justify-center overflow-hidden  shadow-xl">
-	<img [src]="images[currentImage]" alt="{{ 'HEADER.IMAGE_ALT' | translate }}" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000" [class.opacity-0]="!showImage" [class.opacity-100]="showImage">
+	<img [src]="images[currentImage()]" alt="{{ 'HEADER.IMAGE_ALT' | translate }}" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000" [class.opacity-0]="!showImage()" [class.opacity-100]="showImage()">
 	<div class="relative z-10 text-center">
 			<h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-2xl tracking-wide">{{ 'HEADER.TITLE' | translate }}</h1>
 			<p class="mt-2 text-lg md:text-xl text-white drop-shadow-lg font-semibold">{{ 'HEADER.SUBTITLE' | translate }}</p>
 	</div>
 	<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-		<span *ngFor="let img of images; let i = index" class="w-3 h-3 rounded-full bg-white/70 border border-white transition-all duration-300" [class.bg-yellow-400]="i === currentImage"></span>
+		<span *ngFor="let img of images; let i = index" class="w-3 h-3 rounded-full bg-white/70 border border-white transition-all duration-300" [class.bg-yellow-400]="i === currentImage()"></span>
 	</div>
 		<div class="absolute inset-0 bg-black/40"></div>
 </header>

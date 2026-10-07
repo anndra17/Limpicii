@@ -1,13 +1,13 @@
-import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
-    selector: 'app-header',
-    imports: [CommonModule, TranslatePipe],
-    templateUrl: './header.component.html',
-    changeDetection: ChangeDetectionStrategy.Eager,
-    styleUrls: ['./header.component.css']
+	selector: 'app-header',
+	imports: [CommonModule, TranslatePipe],
+	templateUrl: './header.component.html',
+	changeDetection: ChangeDetectionStrategy.Eager,
+	styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 	images: string[] = [
@@ -16,16 +16,19 @@ export class HeaderComponent implements OnInit, OnDestroy {
 		'assets/images/NatureHeader.png',
 		'assets/images/LimpiciiTennis.jpg'
 	];
-	currentImage = 0;
-	showImage = true;
+	currentImage = signal(0);
+	showImage = signal(true);
 	private intervalId: any;
 
 	ngOnInit() {
 		this.intervalId = setInterval(() => {
-			this.showImage = false;
+			this.showImage.set(false);
+
 			setTimeout(() => {
-				this.currentImage = (this.currentImage + 1) % this.images.length;
-				this.showImage = true;
+				this.currentImage.update(
+					(index) => (index + 1) % this.images.length
+				);
+				this.showImage.set(true);
 			}, 400);
 		}, 3500);
 	}
