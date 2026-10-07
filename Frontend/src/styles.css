@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
 
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 @font-face {
   font-family: "Mistral";
   src: url("/assets/fonts/mistral.ttf") format("truetype");
