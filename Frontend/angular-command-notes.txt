@@ -1,0 +1,1 @@
+npm run ng -- generate component features/history/history-page ----- generare componente
