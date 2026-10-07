@@ -2,10 +2,11 @@ import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Language, TranslationService } from '../../../core/services/translation.service';
 import { TranslatePipe } from '../../pipes/translate.pipe';
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-nav-bar',
-    imports: [CommonModule, TranslatePipe],
+    imports: [CommonModule, TranslatePipe, RouterLink],
     templateUrl: './nav-bar.component.html',
     changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./nav-bar.component.css']
