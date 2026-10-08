@@ -7,7 +7,6 @@ import { RouterLink } from "@angular/router";
     selector: "app-home-page",
     imports: [HeaderComponent, TranslatePipe, RouterLink],
     templateUrl: "./home-page.component.html",
-    styleUrls: ["./home-page.component.css"],
     changeDetection: ChangeDetectionStrategy.Eager
 })
 export class HomePageComponent {}
