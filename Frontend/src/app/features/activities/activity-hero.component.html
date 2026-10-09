@@ -1,3 +1,48 @@
-<section #heroElement class="activity-hero" [attr.aria-label]="title()">
-  <h1 #titleElement class="activity-hero__title" [style.--title-size]="titleSize()" [style.--mobile-title-size]="mobileTitleSize()">{{ title() }}</h1>
-</section>
+<div class="activity-copy bg-white">
+  <header class="px-4 py-12 sm:px-6 lg:px-8 lg:py-24">
+    <div class="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-2 lg:gap-16">
+      <div #titlePanel class="grid min-h-70 min-w-0 place-items-center lg:min-h-[450px]">
+        <h1 #titleElement class="activity-title" [style.--title-size]="titleSize()" [style.--mobile-title-size]="mobileTitleSize()">{{ title() }}</h1>
+      </div>
+      <div class="min-w-0 max-w-xl">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-emerald-800">{{ copy().eyebrow }}</p>
+        <p class="max-w-[32ch] text-2xl font-semibold leading-relaxed text-slate-900 lg:text-3xl">{{ copy().intro }}</p>
+        <div class="mt-8 flex flex-wrap items-baseline gap-x-6 gap-y-2 border-t border-emerald-900/15 pt-5 text-sm text-slate-600">
+          <span>{{ labels().level }}</span>
+          <strong class="font-bold text-emerald-800">{{ copy().level }}</strong>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-[#f5f6f1] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.3fr_0.7fr] lg:gap-24">
+      <div>
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-emerald-800">{{ labels().about }}</p>
+        <h2 class="mb-6 font-sans text-4xl font-bold tracking-tight text-slate-900 lg:text-5xl">{{ title() }}</h2>
+        <p class="max-w-[62ch] text-base leading-8 text-slate-600 sm:text-lg">{{ copy().description }}</p>
+      </div>
+      <div class="border-t-2 border-emerald-900/15 pt-6 lg:border-l-2 lg:border-t-0 lg:pl-10 lg:pt-0">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-emerald-800">{{ labels().location }}</p>
+        <p class="text-base leading-8 text-slate-600 sm:text-lg">{{ copy().location }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <div class="mx-auto max-w-7xl">
+      <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-emerald-800">{{ title() }}</p>
+      <h2 class="font-sans text-4xl font-bold tracking-tight text-slate-900 lg:text-5xl">{{ labels().events }}</h2>
+      <div class="mt-10 grid gap-10 md:grid-cols-2 md:gap-16">
+        <article class="border-t-2 border-emerald-900/15 pt-6">
+          <h3 class="mb-3 font-sans text-xl font-bold text-slate-900">{{ labels().competitions }}</h3>
+          <p class="text-base leading-8 text-slate-600 sm:text-lg">{{ copy().competitions }}</p>
+        </article>
+        <article class="border-t-2 border-emerald-900/15 pt-6">
+          <h3 class="mb-3 font-sans text-xl font-bold text-slate-900">{{ labels().camps }}</h3>
+          <p class="text-base leading-8 text-slate-600 sm:text-lg">{{ copy().camps }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>

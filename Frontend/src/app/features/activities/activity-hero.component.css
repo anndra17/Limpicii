@@ -10,17 +10,12 @@
   display: block;
 }
 
-.activity-hero {
-  display: grid;
-  min-height: min(76vh, 780px);
-  min-height: min(76dvh, 780px);
-  padding: clamp(2rem, 5vw, 5rem) 0.5rem;
-  place-items: center;
-  overflow: hidden;
-  background: #faf8f2;
+.activity-copy h2,
+.activity-copy h3 {
+  font-family: 'Open Sans', sans-serif;
 }
 
-.activity-hero__title {
+.activity-title {
   box-sizing: content-box;
   width: max-content;
   margin: 0;
@@ -44,7 +39,7 @@
 }
 
 @media (max-width: 420px) {
-  .activity-hero__title {
+  .activity-title {
     font-size: var(--mobile-title-size);
   }
 }
