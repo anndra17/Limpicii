@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'Coiny';
+  src: url('/assets/fonts/Coiny-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:host {
+  display: block;
+}
+
+.tennis-hero {
+  display: grid;
+  min-height: min(76vh, 780px);
+  min-height: min(76dvh, 780px);
+  padding: clamp(2rem, 5vw, 5rem) 1rem;
+  place-items: center;
+  overflow: hidden;
+  background: #faf8f2;
+}
+
+.tennis-hero__title {
+  width: max-content;
+  max-width: 100%;
+  margin: 0;
+  background-image: url('/assets/images/LimpiciiTennis.jpg');
+  background-position: center 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  font-family: 'Coiny', 'Arial Rounded MT Bold', sans-serif;
+  font-size: clamp(4rem, 26vw, 24rem);
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tennis-hero__title--english {
+  font-size: clamp(4rem, 23vw, 21rem);
+}
+
+@media (max-width: 420px) {
+  .tennis-hero__title {
+    font-size: 17vw;
+  }
+
+  .tennis-hero__title--english {
+    font-size: 14vw;
+  }
+}
