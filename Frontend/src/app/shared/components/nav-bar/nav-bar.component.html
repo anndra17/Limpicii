@@ -67,10 +67,9 @@
         </div>
       </div>
       <a href="#contact" class="block text-white py-2 px-3 rounded hover:bg-teal-300">{{ 'NAV.CONTACT' | translate }}</a>
-      <a href="#sports-facility" class="block bg-yellow-400 text-black py-2 px-3 rounded hover:bg-yellow-300">{{ 'NAV.BOOK_COURT' | translate }}</a>
       <div class="flex gap-2 px-3 py-2" aria-label="{{ 'LANGUAGE.LABEL' | translate }}">
-        <button type="button" (click)="setLanguage('ro')" [attr.aria-pressed]="translationService.language() === 'ro'" class="rounded bg-white/10 px-3 py-1 text-sm font-bold text-white">Română</button>
-        <button type="button" (click)="setLanguage('en')" [attr.aria-pressed]="translationService.language() === 'en'" class="rounded bg-white/10 px-3 py-1 text-sm font-bold text-white">English</button>
+        <button type="button" (click)="setLanguage('ro')" [attr.aria-pressed]="translationService.language() === 'ro'" class="rounded bg-white/10 px-3 py-1 text-sm font-bold text-white">RO</button>
+        <button type="button" (click)="setLanguage('en')" [attr.aria-pressed]="translationService.language() === 'en'" class="rounded bg-white/10 px-3 py-1 text-sm font-bold text-white">EN</button>
       </div>
     </div>
   </div>
