@@ -10,7 +10,7 @@
       <!-- Meniu mare -->
       <div class="hidden md:flex space-x-4 items-center">
         <a href="#top" class="text-white px-3 py-1 rounded-lg font-semibold transition-all duration-200 hover:text-teal-300 hover:bg-white/20">{{ 'NAV.HOME' | translate }}</a>
-        <a href="#despre-noi" class="text-white px-3 py-1 rounded-lg font-semibold transition-all duration-200 hover:text-teal-300 hover:bg-white/20">{{ 'NAV.ABOUT' | translate }}</a>
+        <a routerLink="/history" class="text-white px-3 py-1 rounded-lg font-semibold transition-all duration-200 hover:text-teal-300 hover:bg-white/20">{{ 'NAV.ABOUT' | translate }}</a>
         <div class="relative group">
           <button type="button" aria-haspopup="true" class="text-white px-3 py-1 rounded-lg font-semibold transition-all duration-200 hover:text-teal-300 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">
             {{ 'NAV.ACTIVITIES' | translate }}
@@ -54,7 +54,7 @@
   <div *ngIf="isMenuOpen" class="md:hidden  bg-gradient-to-r from-teal-950  via-emerald-700  to-cyan-700">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       <a href="#top" class="block text-white py-2 px-3 rounded hover:bg-teal-300">{{ 'NAV.HOME' | translate }}</a>
-      <a href="#despre-noi" class="block text-white py-2 px-3 rounded hover:bg-teal-300">{{ 'NAV.ABOUT' | translate }}</a>
+      <a routerLink="/history" (click)="toggleMenu()" class="block text-white py-2 px-3 rounded hover:bg-teal-300">{{ 'NAV.ABOUT' | translate }}</a>
       <div class="rounded">
         <span class="block px-3 pt-2 pb-1 font-semibold text-white">{{ 'NAV.ACTIVITIES' | translate }}</span>
         <div class="grid grid-cols-2 gap-x-2">
