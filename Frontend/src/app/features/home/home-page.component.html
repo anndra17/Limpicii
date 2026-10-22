@@ -96,5 +96,23 @@
 			</p>
 		</div>
 
+		<div class="facility-gallery mt-12" aria-label="Galerie sportivă interactivă" tabindex="0"
+			(keydown)="onFacilityGalleryKeydown($event)" (pointerdown)="onFacilityPointerDown($event)"
+			(pointerup)="onFacilityPointerUp($event)" (pointercancel)="onFacilityPointerCancel()">
+			<div class="facility-gallery__ring" [style.--rotation]="facilityRotation + 'deg'">
+				@for (slide of facilityGallerySlides; track $index; let i = $index) {
+					<article class="facility-gallery__card" [style.--index]="i" [style.--count]="facilityGallerySlides.length" [style.--image]="'url(' + slide.image + ')'">
+						<figure>
+							<img [src]="slide.image" [alt]="slide.alt | translate" loading="lazy" />
+							<figcaption>
+								<strong>{{ slide.title | translate }}</strong>
+								<span>{{ slide.description | translate }}</span>
+							</figcaption>
+						</figure>
+					</article>
+				}
+			</div>
+			<p class="facility-gallery__hint">Cursor deasupra pentru rotire · Glisează pe telefon · ↑/↓ pentru control</p>
+		</div>
 	</div>
 </section>
