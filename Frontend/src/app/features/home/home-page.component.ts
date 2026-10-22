@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { HeaderComponent } from "../../shared/components/header/header.component";
 import { TranslatePipe } from "../../shared/pipes/translate.pipe";
 import { RouterLink } from "@angular/router";
+import { communityStories } from "../community/community-stories";
 
 @Component({
     selector: "app-home-page",
@@ -29,11 +30,5 @@ export class HomePageComponent {
         this.activeCommunityStory = this.nextCommunityStory;
     }
 
-    readonly communityStories = [
-        { image: "assets/images/news/cros15noiembrie.jpg", title: "COMMUNITY_IMPACT.NOVEMBER_TITLE", description: "COMMUNITY_IMPACT.NOVEMBER_DESCRIPTION", alt: "COMMUNITY_IMPACT.NOVEMBER_ALT" },
-        { image: "assets/images/news/brasovMarathon.jpg", title: "COMMUNITY_IMPACT.BRASOV_MARATHON_TITLE", description: "COMMUNITY_IMPACT.BRASOV_MARATHON_DESCRIPTION", alt: "COMMUNITY_IMPACT.BRASOV_MARATHON_ALT" },
-        { image: "assets/images/news/bimboGlobalRace.jpg", title: "COMMUNITY_IMPACT.BIMBO_TITLE", description: "COMMUNITY_IMPACT.BIMBO_DESCRIPTION", alt: "COMMUNITY_IMPACT.BIMBO_ALT" },
-        { image: "assets/images/news/RunnersSupport.jpeg", title: "COMMUNITY_IMPACT.RUNNERS_TITLE", description: "COMMUNITY_IMPACT.RUNNERS_DESCRIPTION", alt: "COMMUNITY_IMPACT.RUNNERS_ALT" },
-        { image: "assets/images/news/assistanceAfterFire.jpeg", title: "COMMUNITY_IMPACT.COMMUNITY_SUPPORT_TITLE", description: "COMMUNITY_IMPACT.COMMUNITY_SUPPORT_DESCRIPTION", alt: "COMMUNITY_IMPACT.COMMUNITY_SUPPORT_ALT" }
-    ];
+    readonly communityStories = communityStories;
 }

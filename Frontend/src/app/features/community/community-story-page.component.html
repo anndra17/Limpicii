@@ -1,0 +1,44 @@
+@if (story; as item) {
+  <main class="mx-auto w-full max-w-5xl px-4 py-10 text-slate-800 sm:px-6 sm:py-14 lg:px-8">
+   
+
+    <article class="overflow-hidden rounded-3xl bg-white shadow-xl shadow-slate-900/10 ring-1 ring-slate-200">
+      <div class="mx-auto max-w-5xl px-5 py-8 sm:px-10 sm:py-12">
+        <div class="grid items-center gap-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(18rem,0.85fr)] lg:gap-10">
+          <div>
+            <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-emerald-800">
+              {{ 'COMMUNITY_IMPACT.STORY_LABEL' | translate }}
+            </p>
+            <h1 class="text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl">
+              {{ item.title | translate }}
+            </h1>
+            <p class="mt-5 text-lg leading-8 text-slate-600">{{ item.description | translate }}</p>
+          </div>
+          <img [src]="item.image" [alt]="item.alt | translate"
+            class="h-56 w-full rounded-2xl object-cover shadow-lg shadow-slate-900/10 sm:h-72 lg:h-80" />
+        </div>
+
+        <section class="mt-9 border-t border-slate-200 pt-7" aria-labelledby="story-background">
+          <h2 id="story-background" class="text-xl font-bold text-emerald-900 sm:text-2xl">
+            {{ 'COMMUNITY_IMPACT.BACKGROUND_TITLE' | translate }}
+          </h2>
+          <p class="mt-3 text-base leading-8 text-slate-700">{{ item.background | translate }}</p>
+        </section>
+
+        <section class="mt-8 rounded-2xl bg-emerald-50 p-5 sm:p-6" aria-labelledby="story-participation">
+          <h2 id="story-participation" class="text-xl font-bold text-emerald-900 sm:text-2xl">
+            {{ 'COMMUNITY_IMPACT.PARTICIPATION_TITLE' | translate }}
+          </h2>
+          <p class="mt-3 text-base leading-8 text-slate-700">{{ item.participation | translate }}</p>
+        </section>
+      </div>
+    </article>
+  </main>
+} @else {
+  <main class="mx-auto max-w-3xl px-4 py-20 text-center">
+    <h1 class="text-3xl font-bold text-slate-900">{{ 'COMMUNITY_IMPACT.NOT_FOUND' | translate }}</h1>
+    <a routerLink="/" fragment="community-impact" class="mt-6 inline-block font-semibold text-emerald-800">
+      {{ 'COMMUNITY_IMPACT.BACK' | translate }}
+    </a>
+  </main>
+}

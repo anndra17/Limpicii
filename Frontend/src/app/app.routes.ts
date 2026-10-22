@@ -12,6 +12,11 @@ export const routes: Routes = [
         import('./features/history/history-page.component')
           .then((module) => module.HistoryPageComponent)
     },
+    { path: 'community/:slug',
+      loadComponent: () =>
+        import('./features/community/community-story-page.component')
+          .then((module) => module.CommunityStoryPageComponent)
+    },
     { path: 'activities',
       loadChildren: () =>
         import('./features/activities/activities.routes')

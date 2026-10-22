@@ -122,11 +122,14 @@
 							[class.community-story--next]="i === nextCommunityStory"
 							[attr.aria-hidden]="i !== activeCommunityStory"
 							[attr.inert]="i !== activeCommunityStory ? '' : null">
-							<img class="community-story__image" [src]="story.image" [alt]="story.alt | translate" />
-							<div class="community-story__content">
-								<h3>{{ story.title | translate }}</h3>
-								<p>{{ story.description | translate }}</p>
-							</div>
+							<a class="community-story__link" [routerLink]="['/community', story.slug]" [attr.aria-label]="story.title | translate">
+								<img class="community-story__image" [src]="story.image" [alt]="story.alt | translate" />
+								<div class="community-story__content">
+									<h3>{{ story.title | translate }}</h3>
+									<p>{{ story.description | translate }}</p>
+									<span class="community-story__read-more">{{ 'COMMUNITY_IMPACT.READ_MORE' | translate }} →</span>
+								</div>
+							</a>
 						</article>
 					}
 				</div>
