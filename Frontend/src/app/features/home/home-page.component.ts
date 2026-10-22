@@ -11,29 +11,29 @@ import { RouterLink } from "@angular/router";
     changeDetection: ChangeDetectionStrategy.Eager
 })
 export class HomePageComponent {
-    activeFacilitySlide = 0;
+    activeCommunityStory = 0;
 
-    get previousFacilitySlide(): number {
-        return (this.activeFacilitySlide - 1 + this.facilitySlides.length) % this.facilitySlides.length;
+    get previousCommunityStory(): number {
+        return (this.activeCommunityStory - 1 + this.communityStories.length) % this.communityStories.length;
     }
 
-    get nextFacilitySlide(): number {
-        return (this.activeFacilitySlide + 1) % this.facilitySlides.length;
+    get nextCommunityStory(): number {
+        return (this.activeCommunityStory + 1) % this.communityStories.length;
     }
 
-    showPreviousFacilitySlide(): void {
-        this.activeFacilitySlide = this.previousFacilitySlide;
+    showPreviousCommunityStory(): void {
+        this.activeCommunityStory = this.previousCommunityStory;
     }
 
-    showNextFacilitySlide(): void {
-        this.activeFacilitySlide = this.nextFacilitySlide;
+    showNextCommunityStory(): void {
+        this.activeCommunityStory = this.nextCommunityStory;
     }
 
-    readonly facilitySlides = [
-        { image: "assets/images/news/cros15noiembrie.jpg", title: "FACILITY.NOVEMBER_TITLE", description: "FACILITY.NOVEMBER_DESCRIPTION", alt: "FACILITY.NOVEMBER_ALT" },
-        { image: "assets/images/news/brasovMarathon.jpg", title: "FACILITY.BRASOV_MARATHON_TITLE", description: "FACILITY.BRASOV_MARATHON_DESCRIPTION", alt: "FACILITY.BRASOV_MARATHON_ALT" },
-        { image: "assets/images/news/bimboGlobalRace.jpg", title: "FACILITY.BIMBO_TITLE", description: "FACILITY.BIMBO_DESCRIPTION", alt: "FACILITY.BIMBO_ALT" },
-        { image: "assets/images/news/RunnersSupport.jpeg", title: "FACILITY.RUNNERS_TITLE", description: "FACILITY.RUNNERS_DESCRIPTION", alt: "FACILITY.RUNNERS_ALT" },
-        { image: "assets/images/news/assistanceAfterFire.jpeg", title: "FACILITY.COMMUNITY_SUPPORT_TITLE", description: "FACILITY.COMMUNITY_SUPPORT_DESCRIPTION", alt: "FACILITY.COMMUNITY_SUPPORT_ALT" }
+    readonly communityStories = [
+        { image: "assets/images/news/cros15noiembrie.jpg", title: "COMMUNITY_IMPACT.NOVEMBER_TITLE", description: "COMMUNITY_IMPACT.NOVEMBER_DESCRIPTION", alt: "COMMUNITY_IMPACT.NOVEMBER_ALT" },
+        { image: "assets/images/news/brasovMarathon.jpg", title: "COMMUNITY_IMPACT.BRASOV_MARATHON_TITLE", description: "COMMUNITY_IMPACT.BRASOV_MARATHON_DESCRIPTION", alt: "COMMUNITY_IMPACT.BRASOV_MARATHON_ALT" },
+        { image: "assets/images/news/bimboGlobalRace.jpg", title: "COMMUNITY_IMPACT.BIMBO_TITLE", description: "COMMUNITY_IMPACT.BIMBO_DESCRIPTION", alt: "COMMUNITY_IMPACT.BIMBO_ALT" },
+        { image: "assets/images/news/RunnersSupport.jpeg", title: "COMMUNITY_IMPACT.RUNNERS_TITLE", description: "COMMUNITY_IMPACT.RUNNERS_DESCRIPTION", alt: "COMMUNITY_IMPACT.RUNNERS_ALT" },
+        { image: "assets/images/news/assistanceAfterFire.jpeg", title: "COMMUNITY_IMPACT.COMMUNITY_SUPPORT_TITLE", description: "COMMUNITY_IMPACT.COMMUNITY_SUPPORT_DESCRIPTION", alt: "COMMUNITY_IMPACT.COMMUNITY_SUPPORT_ALT" }
     ];
 }

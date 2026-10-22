@@ -94,45 +94,45 @@
 	</div>
 </section>
 
-<section id="sports-facility" aria-labelledby="sports-facility-title" class="bg-white py-16 sm:py-20 lg:py-24">
+<section id="community-impact" aria-labelledby="community-impact-title" class="bg-white py-16 sm:py-20 lg:py-24">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="mx-auto max-w-3xl text-center">
-			<p class="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-emerald-800">{{ 'FACILITY.EYEBROW' |
+			<p class="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-emerald-800">{{ 'COMMUNITY_IMPACT.EYEBROW' |
 				translate }}</p>
-			<h2 id="sports-facility-title" class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
-				{{ 'FACILITY.TITLE' | translate }}
+			<h2 id="community-impact-title" class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+				{{ 'COMMUNITY_IMPACT.TITLE' | translate }}
 			</h2>
 			<p class="mt-6 text-base leading-8 text-slate-600 sm:text-lg">
-				{{ 'FACILITY.DESCRIPTION' | translate }}
+				{{ 'COMMUNITY_IMPACT.DESCRIPTION' | translate }}
 			</p>
 		</div>
 
-		<div class="facility-slider mt-12" role="region" aria-roledescription="carousel"
-			[attr.aria-label]="'FACILITY.CAROUSEL_LABEL' | translate">
-			<div class="facility-slider__row">
-				<button type="button" class="facility-slider__arrow facility-slider__arrow--previous" [attr.aria-label]="'FACILITY.PREVIOUS' | translate"
-					(click)="showPreviousFacilitySlide()">
+		<div class="community-story-slider mt-12" role="region" aria-roledescription="carousel"
+			[attr.aria-label]="'COMMUNITY_IMPACT.CAROUSEL_LABEL' | translate">
+			<div class="community-story-slider__row">
+				<button type="button" class="community-story-slider__arrow community-story-slider__arrow--previous" [attr.aria-label]="'COMMUNITY_IMPACT.PREVIOUS' | translate"
+					(click)="showPreviousCommunityStory()">
 					<span aria-hidden="true">←</span>
 				</button>
 
-				<div class="facility-slider__stage" aria-live="polite">
-					@for (slide of facilitySlides; track slide.image; let i = $index) {
-						<article class="facility-story" [class.facility-story--active]="i === activeFacilitySlide"
-							[class.facility-story--previous]="i === previousFacilitySlide"
-							[class.facility-story--next]="i === nextFacilitySlide"
-							[attr.aria-hidden]="i !== activeFacilitySlide"
-							[attr.inert]="i !== activeFacilitySlide ? '' : null">
-							<img class="facility-story__image" [src]="slide.image" [alt]="slide.alt | translate" />
-							<div class="facility-story__content">
-								<h3>{{ slide.title | translate }}</h3>
-								<p>{{ slide.description | translate }}</p>
+				<div class="community-story-slider__stage" aria-live="polite">
+					@for (story of communityStories; track story.image; let i = $index) {
+						<article class="community-story" [class.community-story--active]="i === activeCommunityStory"
+							[class.community-story--previous]="i === previousCommunityStory"
+							[class.community-story--next]="i === nextCommunityStory"
+							[attr.aria-hidden]="i !== activeCommunityStory"
+							[attr.inert]="i !== activeCommunityStory ? '' : null">
+							<img class="community-story__image" [src]="story.image" [alt]="story.alt | translate" />
+							<div class="community-story__content">
+								<h3>{{ story.title | translate }}</h3>
+								<p>{{ story.description | translate }}</p>
 							</div>
 						</article>
 					}
 				</div>
 
-				<button type="button" class="facility-slider__arrow facility-slider__arrow--next" [attr.aria-label]="'FACILITY.NEXT' | translate"
-					(click)="showNextFacilitySlide()">
+				<button type="button" class="community-story-slider__arrow community-story-slider__arrow--next" [attr.aria-label]="'COMMUNITY_IMPACT.NEXT' | translate"
+					(click)="showNextCommunityStory()">
 					<span aria-hidden="true">→</span>
 				</button>
 			</div>
