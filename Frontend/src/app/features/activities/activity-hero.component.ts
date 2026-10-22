@@ -12,6 +12,15 @@ const titleKeys: Record<ActivityId, string> = {
   swimming: 'ACTIVITIES.SWIMMING',
 };
 
+const activityImages: Record<ActivityId, string> = {
+  tennis: '/assets/images/activities/LimpiciiTennis.jpg',
+  athletics: '/assets/images/activities/LimpiciiAthletics.jpeg',
+  skiing: '/assets/images/activities/LimpiciiSki.jpeg',
+  gymnastics: '/assets/images/activities/LimpiciiGymnastics.jpeg',
+  hiking: '/assets/images/activities/LimpiciiHike.jpeg',
+  swimming: '/assets/images/activities/LimpiciiSwimming.jpeg',
+};
+
 @Component({
   selector: 'app-activity-hero',
   templateUrl: './activity-hero.component.html',
@@ -26,6 +35,7 @@ export class ActivityHeroComponent {
   private readonly titleElement = viewChild<ElementRef<HTMLHeadingElement>>('titleElement');
 
   protected readonly title = computed(() => this.translationService.translate(titleKeys[this.activity()]));
+  protected readonly titleImage = computed(() => `url('${activityImages[this.activity()]}')`);
   protected readonly titleSize = computed(() => `${130 / this.title().length}vw`);
   protected readonly mobileTitleSize = computed(() => `${90 / this.title().length}vw`);
   protected readonly labels = computed(() => {

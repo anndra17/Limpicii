@@ -20,7 +20,7 @@
   width: max-content;
   margin: 0;
   padding: 0.2em 0.25em;
-  background-image: url('/assets/images/LimpiciiTennis.jpg');
+  background-image: var(--activity-image);
   background-position: center 55%;
   background-repeat: no-repeat;
   background-size: cover;
