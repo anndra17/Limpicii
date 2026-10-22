@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  --animate-sport: sport-swing 0.8s ease-in-out infinite, sport-colors 1.6s steps(1, end) infinite;
+  --animate-sport: sport-swing 0.8s ease-in-out infinite;
 
   @keyframes sport-swing {
     0%, 100% { transform: rotate(0); }
@@ -10,14 +10,6 @@
     75% { transform: rotate(8deg); }
   }
 
-  @keyframes sport-colors {
-    0%, 49.99% {
-      filter: brightness(0) saturate(100%) invert(78%) sepia(84%) saturate(1021%) hue-rotate(355deg) brightness(104%) contrast(102%);
-    }
-    50%, 100% {
-      filter: brightness(0) saturate(100%) invert(78%) sepia(84%) saturate(1021%) hue-rotate(85deg) brightness(90%) contrast(102%);
-    }
-  }
 }
 
 body {

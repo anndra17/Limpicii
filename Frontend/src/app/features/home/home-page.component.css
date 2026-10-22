@@ -1,3 +1,23 @@
+.activity-shortcut__icon,
+.activity-shortcut__label {
+	transition: filter 180ms ease, color 180ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.activity-shortcut__icon,
+	.activity-shortcut__label { transition: none; }
+}
+
+.activity-shortcut:hover .activity-shortcut__icon,
+.activity-shortcut:focus-visible .activity-shortcut__icon {
+	filter: brightness(0) saturate(100%) invert(78%) sepia(84%) saturate(1021%) hue-rotate(355deg) brightness(104%) contrast(102%);
+}
+
+.activity-shortcut:hover .activity-shortcut__label,
+.activity-shortcut:focus-visible .activity-shortcut__label {
+	color: #a16207;
+}
+
 .facility-slider {
 	--slider-accent: #ffca1a;
 	max-width: 68rem;
