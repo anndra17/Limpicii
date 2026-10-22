@@ -11,10 +11,11 @@ import { TranslatePipe } from '../../pipes/translate.pipe';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 	images: string[] = [
-		'assets/images/LimpiciiHike.jpg',
-		'assets/images/LimpiciiLake.jpg',
-		'assets/images/NatureHeader.png',
-		'assets/images/LimpiciiTennis.jpg'
+		'assets/images/munti-wide.png',
+		'assets/images/activities/LimpiciiHike.jpeg',
+		'assets/images/activities/LimpiciiSwimming.jpeg',
+		'assets/images/LimpiciiTennis.jpg',
+		'assets/images/activities/LimpiciiAthletics.jpeg',
 	];
 	currentImage = signal(0);
 	showImage = signal(true);
