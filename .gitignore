@@ -367,3 +367,4 @@ MigrationBackup/
 FodyWeavers.xsd
 Limpicii.API/appsettings.Development.json
 Inspiration
+.agents/skills/
