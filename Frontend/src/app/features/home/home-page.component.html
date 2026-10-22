@@ -96,19 +96,5 @@
 			</p>
 		</div>
 
-		<div class="filmstrip-viewport mt-12" aria-label="{{ 'FACILITY.TITLE' | translate }}">
-			<div class="filmstrip-track">
-				@for (slide of facilityFilmstripSlides; track $index; let index = $index) {
-					<article class="filmstrip-frame" [attr.aria-hidden]="index >= facilitySlides.length ? 'true' : null">
-						<img class="filmstrip-image" [src]="slide.image" [alt]="index >= facilitySlides.length ? '' : (slide.alt | translate)" loading="lazy" />
-						<div class="filmstrip-caption">
-							<h3 class="text-lg font-bold text-white">{{ slide.title | translate }}</h3>
-							<p class="mt-2 text-sm leading-6 text-white/90">{{ slide.description | translate }}</p>
-						</div>
-					</article>
-				}
-			</div>
-		</div>
-
 	</div>
 </section>

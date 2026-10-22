@@ -12,10 +12,9 @@ import { RouterLink } from "@angular/router";
 })
 export class HomePageComponent {
     readonly facilitySlides = [
-        { image: "assets/images/LimpiciiTennis.jpg", title: "FACILITY.COURTS", description: "FACILITY.COURTS_DESCRIPTION", alt: "ACTIVITY_PAGES.TENNIS.EYEBROW" },
-        { image: "assets/images/LimpiciiTurneuTenis2026.jpg", title: "FACILITY.LOCKER_ROOMS", description: "FACILITY.LOCKER_ROOMS_DESCRIPTION", alt: "ABOUT.IMAGE_ALT" },
-        { image: "assets/images/LimpiciiHike.jpg", title: "FACILITY.SHOWERS", description: "FACILITY.SHOWERS_DESCRIPTION", alt: "ACTIVITIES.HIKING" },
-        { image: "assets/images/LimpiciiLake.jpg", title: "FACILITY.GRANDSTAND", description: "FACILITY.GRANDSTAND_DESCRIPTION", alt: "ACTIVITIES.SWIMMING" }
+        { image: "assets/images/LimpiciiTennis.jpg", title: "FACILITY.NOVEMBER_TITLE", description: "FACILITY.NOVEMBER_DESCRIPTION", alt: "FACILITY.NOVEMBER_ALT" },
+        { image: "assets/images/LimpiciiTurneuTenis2026.jpg", title: "FACILITY.BRASOV_MARATHON_TITLE", description: "FACILITY.BRASOV_MARATHON_DESCRIPTION", alt: "FACILITY.BRASOV_MARATHON_ALT" },
+        { image: "assets/images/LimpiciiLake.jpg", title: "FACILITY.BIMBO_TITLE", description: "FACILITY.BIMBO_DESCRIPTION", alt: "FACILITY.BIMBO_ALT" }
     ];
 
     readonly facilityFilmstripSlides = [...this.facilitySlides, ...this.facilitySlides];
