@@ -1,0 +1,48 @@
+<main class="mx-auto w-full max-w-6xl px-4 py-12 text-slate-800 sm:px-6 sm:py-16 lg:px-8">
+  <div class="mx-auto max-w-3xl text-center">
+    <p class="text-sm font-bold uppercase tracking-[0.2em] text-emerald-800">{{ 'CONTACT.EYEBROW' | translate }}</p>
+    <h1 class="mt-3 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">{{ 'CONTACT.TITLE' | translate }}</h1>
+    <p class="mt-5 text-lg leading-8 text-slate-600">{{ 'CONTACT.INTRO' | translate }}</p>
+  </div>
+
+  <div class="mx-auto mt-10 grid max-w-5xl gap-8 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-12">
+    <form #contactForm="ngForm" (ngSubmit)="submit(contactForm)" class="space-y-5 rounded-3xl bg-white p-6 shadow-xl shadow-slate-900/10 ring-1 ring-slate-200 sm:p-8">
+      <div>
+        <label for="contact-name" class="mb-2 block text-sm font-semibold text-slate-800">{{ 'CONTACT.NAME' | translate }} <span aria-hidden="true">*</span></label>
+        <input id="contact-name" name="name" type="text" required autocomplete="name" ngModel
+          class="w-full rounded-xl border border-slate-300 px-4 py-3 text-base outline-none transition focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20" />
+      </div>
+      <div>
+        <label for="contact-email" class="mb-2 block text-sm font-semibold text-slate-800">{{ 'CONTACT.EMAIL' | translate }} <span aria-hidden="true">*</span></label>
+        <input id="contact-email" name="email" type="email" required autocomplete="email" ngModel
+          class="w-full rounded-xl border border-slate-300 px-4 py-3 text-base outline-none transition focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20" />
+      </div>
+      <div>
+        <label for="contact-subject" class="mb-2 block text-sm font-semibold text-slate-800">{{ 'CONTACT.SUBJECT' | translate }}</label>
+        <input id="contact-subject" name="subject" type="text" ngModel
+          class="w-full rounded-xl border border-slate-300 px-4 py-3 text-base outline-none transition focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20" />
+      </div>
+      <div>
+        <label for="contact-message" class="mb-2 block text-sm font-semibold text-slate-800">{{ 'CONTACT.MESSAGE' | translate }}</label>
+        <textarea id="contact-message" name="message" rows="6" ngModel
+          class="w-full resize-y rounded-xl border border-slate-300 px-4 py-3 text-base outline-none transition focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20"></textarea>
+      </div>
+      <p class="text-sm text-slate-500">{{ 'CONTACT.REQUIRED_NOTE' | translate }}</p>
+      <button type="submit" class="inline-flex min-h-12 items-center justify-center rounded-full bg-emerald-800 px-7 py-3 font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-emerald-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700 focus-visible:ring-offset-2">
+        {{ 'CONTACT.SEND' | translate }}
+      </button>
+      @if (submitted) {
+        <p role="status" class="text-sm font-medium text-emerald-800">{{ 'CONTACT.MAIL_NOTICE' | translate }}</p>
+      }
+    </form>
+
+    <aside class="rounded-3xl bg-emerald-50 p-6 sm:p-8">
+      <h2 class="text-xl font-bold text-emerald-950">{{ 'CONTACT.CLUB_NAME' | translate }}</h2>
+      <address class="mt-5 space-y-4 text-base leading-7 not-italic text-slate-700">
+        <p>{{ 'CONTACT.ADDRESS' | translate }}</p>
+        <p><a class="font-semibold text-emerald-800 underline underline-offset-4" href="tel:+40721814747">+40 721 814 747</a></p>
+        <p><a class="font-semibold text-emerald-800 underline underline-offset-4" href="mailto:limpicii.bv@gmail.com">limpicii.bv@gmail.com</a></p>
+      </address>
+    </aside>
+  </div>
+</main>

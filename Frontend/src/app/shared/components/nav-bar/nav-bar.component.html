@@ -4,7 +4,7 @@
       <!-- Logo + Nume -->
       <div class="flex items-center ">
         <img src="assets/images/LimpiciiLOGO-removedbg.png" alt="Limpicii Logo" class="h-15 w-15 ">
-        <span class="ml-3 text-3xl text-white tracking-wide" style="font-family: 'Mistral', cursive;">Limpicii</span>
+        <span class="ml-3 text-3xl text-white tracking-wide">Limpicii</span>
       </div>
 
       <!-- Meniu mare -->
@@ -23,6 +23,8 @@
             <a routerLink="/activities/gymnastics" class="block px-4 py-2 text-white hover:bg-white/15 hover:text-yellow-300">{{ 'ACTIVITIES.GYMNASTICS' | translate }}</a>
             <a routerLink="/activities/hiking" class="block px-4 py-2 text-white hover:bg-white/15 hover:text-yellow-300">{{ 'ACTIVITIES.HIKING' | translate }}</a>
             <a routerLink="/activities/swimming" class="block px-4 py-2 text-white hover:bg-white/15 hover:text-yellow-300">{{ 'ACTIVITIES.SWIMMING' | translate }}</a>
+            <a routerLink="/activities/camps" class="block px-4 py-2 text-white hover:bg-white/15 hover:text-yellow-300">{{ 'ACTIVITIES.CAMPS' | translate }}</a>
+            <a routerLink="/activities/competitions" class="block px-4 py-2 text-white hover:bg-white/15 hover:text-yellow-300">{{ 'ACTIVITIES.COMPETITIONS' | translate }}</a>
           </div>
         </div>
         <a href="#contact" class="text-white px-3 py-1 rounded-lg font-semibold transition-all duration-200 hover:text-teal-300 hover:bg-white/20">{{ 'NAV.CONTACT' | translate }}</a>
@@ -64,6 +66,8 @@
           <a routerLink="/activities/gymnastics" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.GYMNASTICS' | translate }}</a>
           <a routerLink="/activities/hiking" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.HIKING' | translate }}</a>
           <a routerLink="/activities/swimming" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.SWIMMING' | translate }}</a>
+          <a routerLink="/activities/camps" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.CAMPS' | translate }}</a>
+          <a routerLink="/activities/competitions" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.COMPETITIONS' | translate }}</a>
         </div>
       </div>
       <a href="#contact" class="block text-white py-2 px-3 rounded hover:bg-teal-300">{{ 'NAV.CONTACT' | translate }}</a>
