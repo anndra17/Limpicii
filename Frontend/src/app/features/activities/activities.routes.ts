@@ -2,6 +2,18 @@ import { Routes } from '@angular/router';
 
 export const activitiesRoutes: Routes = [
   {
+    path: 'team',
+    loadComponent: () =>
+      import('./team/team-page.component')
+        .then((module) => module.TeamPageComponent)
+  },
+  {
+    path: 'history',
+    loadComponent: () =>
+      import('./history/activity-history-page.component')
+        .then((module) => module.ActivityHistoryPageComponent)
+  },
+  {
     path: 'camps',
     loadComponent: () =>
       import('./camps/camps-page.component')
