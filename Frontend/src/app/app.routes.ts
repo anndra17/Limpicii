@@ -27,6 +27,11 @@ export const routes: Routes = [
         import('./features/community/community-news-page.component')
           .then((module) => module.CommunityNewsPageComponent)
     },
+    { path: 'contact',
+      loadComponent: () =>
+        import('./features/contact/contact-page.component')
+          .then((module) => module.ContactPageComponent)
+    },
     { path: 'community/:slug',
       loadComponent: () =>
         import('./features/community/community-story-page.component')

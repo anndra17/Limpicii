@@ -198,5 +198,18 @@
   "HISTORY.DOMAIN_TWO": "Schi, tenis și înot",
   "HISTORY.DOMAIN_THREE": "Gimnastică și fitness",
   "HISTORY.DOMAIN_FOUR": "Drumeție și altetism",
-  "HISTORY.AFFILIATION": "Începând cu anul 2012, Asociația Club Sportiv LIMPICII Brașov este afiliată la Federația Română de Tenis. Are sportivi care participă la concursurile aflate sub egida FRT și organizează, din 2015, Brașov Junior Tennis Championship, competiție din Circuitul Național FRT care reunește anual la start peste 100 de copii din întreaga țară."
+  "HISTORY.AFFILIATION": "Începând cu anul 2012, Asociația Club Sportiv LIMPICII Brașov este afiliată la Federația Română de Tenis. Are sportivi care participă la concursurile aflate sub egida FRT și organizează, din 2015, Brașov Junior Tennis Championship, competiție din Circuitul Național FRT care reunește anual la start peste 100 de copii din întreaga țară.",
+  "CONTACT.EYEBROW": "Suntem aici să te ajutăm",
+  "CONTACT.TITLE": "Hai să vorbim",
+  "CONTACT.INTRO": "Ai o întrebare despre activități, înscrieri sau club? Scrie-ne ori folosește datele de contact de mai jos.",
+  "CONTACT.FORM_TITLE": "Scrie-ne un mesaj",
+  "CONTACT.NAME": "Nume",
+  "CONTACT.EMAIL": "E-mail",
+  "CONTACT.SUBJECT": "Subiect",
+  "CONTACT.MESSAGE": "Mesaj",
+  "CONTACT.REQUIRED_NOTE": "Câmpurile marcate cu * sunt obligatorii.",
+  "CONTACT.SEND": "Deschide aplicația de e-mail",
+  "CONTACT.MAIL_NOTICE": "Mesajul este pregătit în aplicația ta de e-mail.",
+  "CONTACT.CLUB_NAME": "Asociația Sportivă Limpicii Brașov",
+  "CONTACT.ADDRESS": "Str. Tablei nr. 1, Mun. Brașov, România"
 }

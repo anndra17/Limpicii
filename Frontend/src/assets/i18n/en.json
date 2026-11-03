@@ -198,5 +198,18 @@
   "HISTORY.DOMAIN_TWO": "Skiing, tennis and swimming",
   "HISTORY.DOMAIN_THREE": "Gymnastics and fitness",
   "HISTORY.DOMAIN_FOUR": "Hiking and athletism",
-  "HISTORY.AFFILIATION": "Since 2012, the Limpicii Brașov Sports Club Association has been affiliated with the Romanian Tennis Federation (FRT). Its athletes compete in FRT-sanctioned tournaments, and since 2015 the association has organized the Brașov Junior Tennis Championship, part of the FRT National Circuit, which brings together more than 100 children from across Romania each year."
+  "HISTORY.AFFILIATION": "Since 2012, the Limpicii Brașov Sports Club Association has been affiliated with the Romanian Tennis Federation (FRT). Its athletes compete in FRT-sanctioned tournaments, and since 2015 the association has organized the Brașov Junior Tennis Championship, part of the FRT National Circuit, which brings together more than 100 children from across Romania each year.",
+  "CONTACT.EYEBROW": "We’re here to help",
+  "CONTACT.TITLE": "Let’s talk",
+  "CONTACT.INTRO": "Have a question about activities, registration or the club? Send us a message or use the contact details below.",
+  "CONTACT.FORM_TITLE": "Send us a message",
+  "CONTACT.NAME": "Name",
+  "CONTACT.EMAIL": "Email",
+  "CONTACT.SUBJECT": "Subject",
+  "CONTACT.MESSAGE": "Message",
+  "CONTACT.REQUIRED_NOTE": "Fields marked with * are required.",
+  "CONTACT.SEND": "Open your email app",
+  "CONTACT.MAIL_NOTICE": "Your message is ready in your email app.",
+  "CONTACT.CLUB_NAME": "Limpicii Brașov Sports Association",
+  "CONTACT.ADDRESS": "1 Tablei Street, Brașov, Romania"
 }
