@@ -1,4 +1,4 @@
-import { Component, DestroyRef, ElementRef, afterNextRender, afterRenderEffect, computed, inject, input, viewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
 import { TranslationService } from '../../core/services/translation.service';
 
 type ActivityId = 'tennis' | 'athletics' | 'skiing' | 'gymnastics' | 'hiking' | 'swimming';
@@ -24,20 +24,15 @@ const activityImages: Record<ActivityId, string> = {
 @Component({
   selector: 'app-activity-hero',
   templateUrl: './activity-hero.component.html',
-  styleUrl: './activity-hero.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ActivityHeroComponent {
   readonly activity = input.required<ActivityId>();
 
   private readonly translationService = inject(TranslationService);
-  private readonly destroyRef = inject(DestroyRef);
-  private readonly titlePanel = viewChild<ElementRef<HTMLElement>>('titlePanel');
-  private readonly titleElement = viewChild<ElementRef<HTMLHeadingElement>>('titleElement');
 
   protected readonly title = computed(() => this.translationService.translate(titleKeys[this.activity()]));
-  protected readonly titleImage = computed(() => `url('${activityImages[this.activity()]}')`);
-  protected readonly titleSize = computed(() => `${130 / this.title().length}vw`);
-  protected readonly mobileTitleSize = computed(() => `${90 / this.title().length}vw`);
+  protected readonly activityImage = computed(() => activityImages[this.activity()]);
   protected readonly labels = computed(() => {
     const translate = (key: string) => this.translationService.translate(`ACTIVITY_PAGES.COMMON.${key}`);
     return {
@@ -63,40 +58,4 @@ export class ActivityHeroComponent {
     };
   });
 
-  constructor() {
-    afterRenderEffect(() => {
-      this.title();
-      this.fitTitle();
-    });
-
-    afterNextRender(() => {
-      const panel = this.titlePanel()?.nativeElement;
-      if (!panel) return;
-
-      const observer = new ResizeObserver(() => this.fitTitle());
-      observer.observe(panel);
-      this.destroyRef.onDestroy(() => observer.disconnect());
-      void document.fonts.ready.then(() => this.fitTitle());
-    });
-  }
-
-  private fitTitle(): void {
-    const panel = this.titlePanel()?.nativeElement;
-    const title = this.titleElement()?.nativeElement;
-    if (!panel || !title) return;
-
-    title.style.removeProperty('font-size');
-
-    const panelStyles = getComputedStyle(panel);
-    const availableWidth = panel.clientWidth
-      - parseFloat(panelStyles.paddingLeft)
-      - parseFloat(panelStyles.paddingRight)
-      - 16;
-    const titleWidth = title.getBoundingClientRect().width + 8;
-
-    if (titleWidth > availableWidth) {
-      const baseSize = parseFloat(getComputedStyle(title).fontSize);
-      title.style.fontSize = `${baseSize * availableWidth / titleWidth}px`;
-    }
-  }
 }
