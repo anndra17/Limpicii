@@ -1,51 +1,35 @@
-<section class="mx-auto w-full max-w-5xl px-4 py-12 text-slate-800 sm:px-6 sm:py-16 lg:px-8">
-  <h1 class="mb-6 text-center text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-    {{ 'HISTORY.TITLE' | translate }}
-  </h1>
+<main class="overflow-hidden bg-amber-50 text-slate-800">
+  <section class="mx-auto max-w-6xl px-6 pb-8 pt-14 md:pb-12 md:pt-20" aria-labelledby="about-title">
+    <p class="mb-3 text-center font-semibold uppercase tracking-[0.18em] text-emerald-700">{{ 'ABOUT_US.EYEBROW' | translate }}</p>
+    <h1 id="about-title" class="mx-auto max-w-4xl text-center text-3xl font-bold text-teal-950 md:text-4xl">{{ 'ABOUT_US.TITLE' | translate }}</h1>
+    <p class="mx-auto mt-5 max-w-3xl text-center text-sm leading-6 text-slate-600 md:text-base md:leading-7">{{ 'ABOUT_US.INTRO' | translate }}</p>
+  </section>
 
-  <img
-    src="assets/images/TITLU04-copy.jpg"
-    [alt]="'HISTORY.IMAGE_ALT' | translate"
-    class="mx-auto mb-10 block w-full max-w-3xl rounded-2xl object-contain shadow-lg"
-  />
+  <section class="mx-auto max-w-5xl space-y-12 px-6 pb-16 md:pb-24">
+    <section aria-labelledby="about-activities-title">
+      <h2 id="about-activities-title" class="mb-3 text-2xl font-bold text-teal-950 md:text-3xl">{{ 'ABOUT_US.ACTIVITIES_TITLE' | translate }}</h2>
+      <p class="mb-5 text-sm leading-7 text-slate-600 md:text-base md:leading-8">{{ 'ABOUT_US.ACTIVITIES_TEXT' | translate }}</p>
+      <ul class="flex flex-wrap gap-3">
+        <li class="rounded-full bg-emerald-100 px-5 py-2 text-sm font-semibold text-emerald-900">{{ 'HISTORY.DOMAIN_ONE' | translate }}</li>
+        <li class="rounded-full bg-emerald-100 px-5 py-2 text-sm font-semibold text-emerald-900">{{ 'HISTORY.DOMAIN_TWO' | translate }}</li>
+        <li class="rounded-full bg-emerald-100 px-5 py-2 text-sm font-semibold text-emerald-900">{{ 'HISTORY.DOMAIN_THREE' | translate }}</li>
+        <li class="rounded-full bg-emerald-100 px-5 py-2 text-sm font-semibold text-emerald-900">{{ 'HISTORY.DOMAIN_FOUR' | translate }}</li>
+        <li class="rounded-full bg-emerald-100 px-5 py-2 text-sm font-semibold text-emerald-900">{{ 'ABOUT_US.CAMPS' | translate }}</li>
+      </ul>
+    </section>
 
-  <div class="space-y-6 text-base leading-8 sm:text-lg">
-    <p>{{ 'HISTORY.PARAGRAPH_ONE' | translate }}</p>
-    <p>{{ 'HISTORY.PARAGRAPH_TWO' | translate }}</p>
+    <section aria-labelledby="about-community-title">
+      <h2 id="about-community-title" class="mb-3 text-2xl font-bold text-teal-950 md:text-3xl">{{ 'ABOUT_US.COMMUNITY_TITLE' | translate }}</h2>
+      <p class="text-sm leading-7 text-slate-600 md:text-base md:leading-8">{{ 'ABOUT_US.COMMUNITY_TEXT' | translate }}</p>
+    </section>
 
-    <h2 class="pt-4 text-2xl font-bold text-emerald-900 sm:text-3xl">
-      {{ 'HISTORY.ASSOCIATION_TITLE' | translate }}
-    </h2>
-    <p>{{ 'HISTORY.ASSOCIATION_INTRO' | translate }}</p>
-
-    <h2 class="pt-4 text-2xl font-bold text-emerald-900 sm:text-3xl">
-      {{ 'HISTORY.OBJECTIVES_TITLE' | translate }}
-    </h2>
-    <p>{{ 'HISTORY.OBJECTIVES_INTRO' | translate }}</p>
-
-    <ul class="list-disc space-y-2 pl-6 marker:text-emerald-700">
-      <li>{{ 'HISTORY.OBJECTIVE_ONE' | translate }}</li>
-      <li>{{ 'HISTORY.OBJECTIVE_TWO' | translate }}</li>
-      <li>{{ 'HISTORY.OBJECTIVE_THREE' | translate }}</li>
-      <li>{{ 'HISTORY.OBJECTIVE_FOUR' | translate }}</li>
-      <li>{{ 'HISTORY.OBJECTIVE_FIVE' | translate }}</li>
-      <li>{{ 'HISTORY.OBJECTIVE_SIX' | translate }}</li>
-      <li>{{ 'HISTORY.OBJECTIVE_SEVEN' | translate }}</li>
-      <li>{{ 'HISTORY.OBJECTIVE_EIGHT' | translate }}</li>
-    </ul>
-
-    <p>{{ 'HISTORY.PROGRAM' | translate }}</p>
-
-    <h2 class="pt-4 text-2xl font-bold text-emerald-900 sm:text-3xl">
-      {{ 'HISTORY.DOMAINS_TITLE' | translate }}
-    </h2>
-    <ul class="list-disc space-y-2 pl-6 marker:text-emerald-700">
-      <li>{{ 'HISTORY.DOMAIN_ONE' | translate }}</li>
-      <li>{{ 'HISTORY.DOMAIN_TWO' | translate }}</li>
-      <li>{{ 'HISTORY.DOMAIN_THREE' | translate }}</li>
-      <li>{{ 'HISTORY.DOMAIN_FOUR' | translate }}</li>
-    </ul>
-
-    <p>{{ 'HISTORY.AFFILIATION' | translate }}</p>
-  </div>
-</section>
+    <section aria-labelledby="about-values-title">
+      <h2 id="about-values-title" class="mb-3 text-2xl font-bold text-teal-950 md:text-3xl">{{ 'ABOUT_US.VALUES_TITLE' | translate }}</h2>
+      <ul class="grid gap-3 sm:grid-cols-2">
+        <li class="rounded-2xl bg-white/80 p-4 text-sm leading-6 shadow-sm md:text-base">{{ 'ABOUT_US.VALUE_ONE' | translate }}</li>
+        <li class="rounded-2xl bg-white/80 p-4 text-sm leading-6 shadow-sm md:text-base">{{ 'ABOUT_US.VALUE_TWO' | translate }}</li>
+        <li class="rounded-2xl bg-white/80 p-4 text-sm leading-6 shadow-sm md:text-base">{{ 'ABOUT_US.VALUE_THREE' | translate }}</li>
+      </ul>
+    </section>
+  </section>
+</main>

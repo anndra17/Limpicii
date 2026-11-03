@@ -1,0 +1,26 @@
+<main class="overflow-hidden bg-amber-50 text-slate-800">
+  <section class="mx-auto max-w-6xl px-6 pb-10 pt-14 md:pb-14 md:pt-20" aria-labelledby="news-title">
+    <p class="mb-3 text-center font-semibold uppercase tracking-[0.18em] text-emerald-700">{{ 'NEWS.EYEBROW' | translate }}</p>
+    <h1 id="news-title" class="mx-auto max-w-4xl text-center text-3xl font-bold text-teal-950 md:text-4xl">{{ 'NEWS.TITLE' | translate }}</h1>
+    <p class="mx-auto mt-5 max-w-3xl text-center text-sm leading-6 text-slate-600 md:text-base md:leading-7">{{ 'NEWS.INTRO' | translate }}</p>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-6 pb-16 md:pb-24" aria-label="{{ 'NEWS.TITLE' | translate }}">
+    <div class="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+      @for (story of stories; track story.slug) {
+        <a [routerLink]="['/community', story.slug]" class="group overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-emerald-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-700">
+          <img [src]="story.image" [alt]="story.alt | translate" loading="lazy" class="aspect-[16/10] w-full object-cover transition duration-300 group-hover:scale-[1.02]" />
+          <div class="p-6">
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-emerald-700">{{ 'COMMUNITY_IMPACT.STORY_LABEL' | translate }}</p>
+            <h2 class="text-xl font-bold leading-snug text-teal-950">{{ story.title | translate }}</h2>
+            <p class="mt-3 line-clamp-3 text-sm leading-6 text-slate-600">{{ story.description | translate }}</p>
+            <span class="mt-5 inline-flex items-center gap-2 font-semibold text-emerald-800">
+              {{ 'COMMUNITY_IMPACT.READ_MORE' | translate }}
+              <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </span>
+          </div>
+        </a>
+      }
+    </div>
+  </section>
+</main>

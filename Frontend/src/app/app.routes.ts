@@ -22,6 +22,11 @@ export const routes: Routes = [
         import('./features/activities/team/team-page.component')
           .then((module) => module.TeamPageComponent)
     },
+    { path: 'news',
+      loadComponent: () =>
+        import('./features/community/community-news-page.component')
+          .then((module) => module.CommunityNewsPageComponent)
+    },
     { path: 'community/:slug',
       loadComponent: () =>
         import('./features/community/community-story-page.component')
