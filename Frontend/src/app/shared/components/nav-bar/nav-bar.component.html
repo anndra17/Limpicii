@@ -8,9 +8,9 @@
 
       <!-- Meniu mare -->
       <div class="hidden md:flex space-x-4 items-center">
-        <a href="#top" class="text-white px-3 py-1 rounded-lg font-semibold transition-all duration-200 hover:text-teal-300 hover:bg-white/20">{{ 'NAV.HOME' | translate }}</a>
+        <a href="#top" class="text-white px-3 py-1 rounded-lg transition-all duration-200 hover:text-teal-300 hover:bg-white/20">{{ 'NAV.HOME' | translate }}</a>
         <div class="relative group">
-          <button type="button" aria-haspopup="true" class="text-white px-3 py-1 rounded-lg font-semibold transition-all duration-200 hover:text-teal-300 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">
+          <button type="button" aria-haspopup="true" class="text-white px-3 py-1 rounded-lg transition-all duration-200 hover:text-teal-300 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">
             {{ 'NAV.ABOUT' | translate }}
             <span aria-hidden="true" class="ml-1 inline-block transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180">▾</span>
           </button>
@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="relative group">
-          <button type="button" aria-haspopup="true" class="text-white px-3 py-1 rounded-lg font-semibold transition-all duration-200 hover:text-teal-300 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">
+          <button type="button" aria-haspopup="true" class="text-white px-3 py-1 rounded-lg transition-all duration-200 hover:text-teal-300 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">
             {{ 'NAV.ACTIVITIES' | translate }}
             <span aria-hidden="true" class="ml-1 inline-block transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180">▾</span>
           </button>
@@ -36,11 +36,11 @@
             <a routerLink="/activities/competitions" class="block px-4 py-2 text-white hover:bg-white/15 hover:text-yellow-300">{{ 'ACTIVITIES.COMPETITIONS' | translate }}</a>
           </div>
         </div>
-        <a routerLink="/news" class="text-white px-3 py-1 rounded-lg font-semibold transition-all duration-200 hover:text-teal-300 hover:bg-white/20">{{ 'NAV.NEWS' | translate }}</a>
-        <a routerLink="/contact" class="text-white px-3 py-1 rounded-lg font-semibold transition-all duration-200 hover:text-teal-300 hover:bg-white/20">{{ 'NAV.CONTACT' | translate }}</a>
+        <a routerLink="/news" class="text-white px-3 py-1 rounded-lg transition-all duration-200 hover:text-teal-300 hover:bg-white/20">{{ 'NAV.NEWS' | translate }}</a>
+        <a routerLink="/contact" class="text-white px-3 py-1 rounded-lg transition-all duration-200 hover:text-teal-300 hover:bg-white/20">{{ 'NAV.CONTACT' | translate }}</a>
         <div class="flex items-center gap-1 rounded-full bg-white/10 p-1" aria-label="{{ 'LANGUAGE.LABEL' | translate }}">
-          <button type="button" (click)="setLanguage('ro')" [attr.aria-pressed]="translationService.language() === 'ro'" class="rounded-full px-2 py-1 text-xs font-bold text-white hover:bg-white/20">RO</button>
-          <button type="button" (click)="setLanguage('en')" [attr.aria-pressed]="translationService.language() === 'en'" class="rounded-full px-2 py-1 text-xs font-bold text-white hover:bg-white/20">EN</button>
+          <button type="button" (click)="setLanguage('ro')" [attr.aria-pressed]="translationService.language() === 'ro'" class="rounded-full px-2 py-1 text-xs text-white hover:bg-white/20">RO</button>
+          <button type="button" (click)="setLanguage('en')" [attr.aria-pressed]="translationService.language() === 'en'" class="rounded-full px-2 py-1 text-xs text-white hover:bg-white/20">EN</button>
         </div>
       </div>
 
@@ -67,7 +67,7 @@
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       <a href="#top" class="block text-white py-2 px-3 rounded hover:bg-teal-300">{{ 'NAV.HOME' | translate }}</a>
       <div class="rounded">
-        <span class="block px-3 pt-2 pb-1 font-semibold text-white">{{ 'NAV.ABOUT' | translate }}</span>
+        <span class="block px-3 pt-2 pb-1 text-white">{{ 'NAV.ABOUT' | translate }}</span>
         <div class="grid grid-cols-2 gap-x-2">
           <a routerLink="/about-us" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'NAV.ABOUT' | translate }}</a>
           <a routerLink="/team" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.TEAM' | translate }}</a>
@@ -75,7 +75,7 @@
         </div>
       </div>
       <div class="rounded">
-        <span class="block px-3 pt-2 pb-1 font-semibold text-white">{{ 'NAV.ACTIVITIES' | translate }}</span>
+        <span class="block px-3 pt-2 pb-1 text-white">{{ 'NAV.ACTIVITIES' | translate }}</span>
         <div class="grid grid-cols-2 gap-x-2">
           <a routerLink="/activities/tennis" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.TENNIS' | translate }}</a>
           <a routerLink="/activities/athletics" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.ATHLETICS' | translate }}</a>
@@ -90,8 +90,8 @@
       <a routerLink="/news" (click)="toggleMenu()" class="block text-white py-2 px-3 rounded hover:bg-teal-300">{{ 'NAV.NEWS' | translate }}</a>
       <a routerLink="/contact" (click)="toggleMenu()" class="block text-white py-2 px-3 rounded hover:bg-teal-300">{{ 'NAV.CONTACT' | translate }}</a>
       <div class="flex gap-2 px-3 py-2" aria-label="{{ 'LANGUAGE.LABEL' | translate }}">
-        <button type="button" (click)="setLanguage('ro')" [attr.aria-pressed]="translationService.language() === 'ro'" class="rounded bg-white/10 px-3 py-1 text-sm font-bold text-white">RO</button>
-        <button type="button" (click)="setLanguage('en')" [attr.aria-pressed]="translationService.language() === 'en'" class="rounded bg-white/10 px-3 py-1 text-sm font-bold text-white">EN</button>
+        <button type="button" (click)="setLanguage('ro')" [attr.aria-pressed]="translationService.language() === 'ro'" class="rounded bg-white/10 px-3 py-1 text-sm text-white">RO</button>
+        <button type="button" (click)="setLanguage('en')" [attr.aria-pressed]="translationService.language() === 'en'" class="rounded bg-white/10 px-3 py-1 text-sm text-white">EN</button>
       </div>
     </div>
   </div>

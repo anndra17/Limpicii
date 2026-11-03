@@ -3,6 +3,7 @@
 
 @theme {
   --font-coiny: "Coiny", cursive;
+  --font-sans: "Scope One", serif;
   --animate-sport: sport-swing 0.8s ease-in-out infinite;
 
   @keyframes sport-swing {
@@ -14,7 +15,24 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Scope One", serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Caveat Brush", cursive;
+  font-weight: 400;
 }
 
 @font-face {
