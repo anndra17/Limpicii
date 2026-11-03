@@ -8,12 +8,6 @@ export const activitiesRoutes: Routes = [
         .then((module) => module.TeamPageComponent)
   },
   {
-    path: 'history',
-    loadComponent: () =>
-      import('./history/activity-history-page.component')
-        .then((module) => module.ActivityHistoryPageComponent)
-  },
-  {
     path: 'camps',
     loadComponent: () =>
       import('./camps/camps-page.component')
