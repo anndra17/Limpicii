@@ -7,7 +7,7 @@ export const routes: Routes = [
       import('./features/home/home-page.component')
         .then((module) => module.HomePageComponent)
     },
-    { path: 'history',
+    { path: 'about-us',
       loadComponent: () => 
         import('./features/history/history-page.component')
           .then((module) => module.HistoryPageComponent)
