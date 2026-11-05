@@ -1,6 +1,6 @@
 .club-title {
 	margin: 0 auto;
-	width: min(92vw, 70rem);
+	width: min(92vw, 35rem);
 }
 
 .club-title__image {
@@ -9,4 +9,11 @@
 	height: auto;
 	mix-blend-mode: screen;
 	filter: drop-shadow(0 4px 12px rgb(0 0 0 / 55%));
+}
+
+.club-subtitle {
+	max-width: calc(100vw - 2rem);
+	margin-inline: auto;
+	font-size: clamp(.875rem, 5vw, 1.125rem);
+	line-height: 1.25;
 }
