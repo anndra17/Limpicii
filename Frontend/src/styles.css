@@ -3,7 +3,7 @@
 
 @theme {
   --font-coiny: "Coiny", cursive;
-  --font-sans: "Scope One", serif;
+  --font-sans: "Nunito", sans-serif;
   --animate-sport: sport-swing 0.8s ease-in-out infinite;
 
   @keyframes sport-swing {
@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: "Scope One", serif;
+  font-family: "Nunito", sans-serif;
 }
 
 button,
