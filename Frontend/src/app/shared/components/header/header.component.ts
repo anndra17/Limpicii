@@ -1,6 +1,7 @@
-import { Component, OnInit, OnDestroy, ChangeDetectionStrategy, signal } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '../../pipes/translate.pipe';
+import { TranslationService } from '../../../core/services/translation.service';
 
 @Component({
 	selector: 'app-header',
@@ -10,6 +11,13 @@ import { TranslatePipe } from '../../pipes/translate.pipe';
 	styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
+	private readonly translation = inject(TranslationService);
+	get titleImage(): string {
+		return this.translation.language() === 'ro'
+			? 'assets/images/limpicii-title-ro.png'
+			: 'assets/images/limpicii-title-en.png';
+	}
+
 	images: string[] = [
 		'assets/images/munti-wide.png',
 		'assets/images/activities/LimpiciiHike.jpeg',
