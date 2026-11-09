@@ -1,26 +1,66 @@
 <main class="overflow-hidden bg-amber-50 text-slate-800">
-  <section class="mx-auto max-w-6xl px-6 pb-8 pt-14 md:pb-12 md:pt-20" aria-labelledby="camps-title">
-    <p class="mb-3 text-center font-semibold uppercase tracking-[0.18em] text-emerald-700">{{ 'CAMPS.EYEBROW' | translate }}</p>
-    <h1 id="camps-title" class="mx-auto max-w-4xl text-center text-3xl font-bold text-teal-950 md:text-4xl">{{ 'CAMPS.TITLE' | translate }}</h1>
-    <p class="mx-auto mt-5 max-w-3xl text-center text-sm italic leading-6 text-slate-600 md:text-base md:leading-7">{{ 'CAMPS.INTRO' | translate }}</p>
+  <!-- Introductory heading and short tagline -->
+  <section
+    class="mx-auto max-w-6xl px-6 pb-8 pt-14 md:pb-12 md:pt-20"
+    aria-labelledby="camps-title"
+  >
+    <p class="mb-3 text-center font-semibold uppercase tracking-[0.18em] text-emerald-700">
+      {{ 'CAMPS.EYEBROW' | translate }}
+    </p>
+    <h1 id="camps-title" class="mx-auto max-w-4xl text-center text-3xl font-bold text-teal-950 md:text-4xl">
+      {{ 'CAMPS.TITLE' | translate }}
+    </h1>
+    <p class="mx-auto mt-5 max-w-3xl text-center text-sm italic leading-6 text-slate-600 md:text-base md:leading-7">
+      {{ 'CAMPS.INTRO' | translate }}
+    </p>
   </section>
 
-  <section class="mx-auto max-w-6xl px-6 pb-16 md:pb-24" aria-labelledby="camps-section-title">
-    <h2 id="camps-section-title" class="mb-6 text-2xl font-bold text-teal-950 md:text-3xl">{{ 'CAMPS.SECTION_TITLE' | translate }}</h2>
+  <!-- Camp photo gallery: update each image and its alt text here -->
+  <section
+    class="mx-auto max-w-6xl px-6 pb-8 md:pb-12"
+    aria-label="{{ 'CAMPS.GALLERY_LABEL' | translate }}"
+  >
     <div class="grid gap-x-10 gap-y-8 md:grid-cols-3">
-      <article class="border-t border-emerald-200 pt-5">
-        <h3 class="mb-3 text-xl font-bold text-teal-950">{{ 'CAMPS.SEASIDE_TITLE' | translate }}</h3>
-        <p class="text-sm leading-7 text-slate-600 md:text-base md:leading-8">{{ 'CAMPS.SEASIDE_TEXT' | translate }}</p>
+      <article>
+        <img
+          src="assets/images/camps/camp_Rimet.jpg"
+          alt="Peisaj montan dintr-o tabără Limpicii"
+          class="h-36 w-full rounded-xl object-cover"
+        />
       </article>
-      <article class="border-t border-emerald-200 pt-5">
-        <h3 class="mb-3 text-xl font-bold text-teal-950">{{ 'CAMPS.MOUNTAIN_TITLE' | translate }}</h3>
-        <p class="text-sm leading-7 text-slate-600 md:text-base md:leading-8">{{ 'CAMPS.MOUNTAIN_TEXT' | translate }}</p>
+      <article>
+        <img
+          src="assets/images/camps/hike_Moldoveanu.jpg"
+          alt="Copiii Limpicii în drumeție spre Vârful Moldoveanu"
+          class="h-36 w-full rounded-xl object-cover object-top"
+        />
       </article>
-      <article class="border-t border-emerald-200 pt-5">
-        <h3 class="mb-3 text-xl font-bold text-teal-950">{{ 'CAMPS.SKI_TITLE' | translate }}</h3>
-        <p class="text-sm leading-7 text-slate-600 md:text-base md:leading-8">{{ 'CAMPS.SKI_TEXT' | translate }}</p>
+      <article>
+        <img
+          src="assets/images/camps/camps_seaside.jpg"
+          alt="Copiii Limpicii într-o tabără la mare"
+          class="h-36 w-full rounded-xl object-cover"
+        />
       </article>
     </div>
-    <p class="mt-8 border-t border-emerald-200 pt-5 text-sm leading-7 text-slate-600 md:text-base md:leading-8">{{ 'CAMPS.NOTE' | translate }}</p>
+  </section>
+
+  <!-- Camp description: each paragraph has its own translation key -->
+  <section class="mx-auto max-w-3xl px-6 pb-24" aria-labelledby="camps-description-title">
+    <h2 id="camps-description-title" class="sr-only">
+      {{ 'CAMPS.DESCRIPTION_TITLE' | translate }}
+    </h2>
+    <p class="mt-2 text-center text-sm leading-7 text-slate-600 md:text-base md:leading-8">
+      {{ 'CAMPS.DESCRIPTION' | translate }}
+    </p>
+    <p class="mt-4 text-center text-sm leading-7 text-slate-600 md:text-base md:leading-8">
+      {{ 'CAMPS.DESCRIPTION_P1' | translate }}
+    </p>
+    <p class="mt-4 text-center text-sm leading-7 text-slate-600 md:text-base md:leading-8">
+      {{ 'CAMPS.DESCRIPTION_P2' | translate }}
+    </p>
+    <p class=" text-center text-sm leading-7 text-slate-600 md:text-base md:leading-8">
+      {{ 'CAMPS.DESCRIPTION_P3' | translate }}
+    </p>
   </section>
 </main>
