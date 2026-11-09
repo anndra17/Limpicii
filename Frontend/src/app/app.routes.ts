@@ -9,8 +9,8 @@ export const routes: Routes = [
     },
     { path: 'about-us',
       loadComponent: () => 
-        import('./features/history/history-page.component')
-          .then((module) => module.HistoryPageComponent)
+        import('./features/about-us/about-us-page.component')
+          .then((module) => module.AboutUsPageComponent)
     },
     { path: 'history',
       loadComponent: () =>
