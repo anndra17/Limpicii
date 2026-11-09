@@ -14,7 +14,7 @@ export const routes: Routes = [
     },
     { path: 'history',
       loadComponent: () =>
-        import('./features/activities/history/activity-history-page.component')
+        import('./features/history/activity-history-page.component')
           .then((module) => module.ActivityHistoryPageComponent)
     },
     { path: 'team',
