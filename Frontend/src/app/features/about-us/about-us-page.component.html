@@ -31,24 +31,26 @@
       </ul>
     </section>
 
-    <section aria-labelledby="about-community-title">
-      <h2 id="about-community-title" class="mb-3 text-2xl font-bold text-teal-950 md:text-3xl">{{
-        'ABOUT_US.COMMUNITY_TITLE' | translate }}</h2>
-      <p class="text-sm leading-7 text-slate-600 md:text-base md:leading-8">{{ 'ABOUT_US.COMMUNITY_TEXT' | translate }}
-      </p>
+    <section aria-labelledby="about-activities-title">
+      <h2 id="about-activities-title" class="mb-8  text-2xl font-bold text-teal-950 md:text-3xl">{{
+        'ABOUT_US.ACTIVITIES_TITLE' | translate }}</h2>
+      <ul class="mb-8  grid grid-cols-4 justify-items-center gap-3">
+        <li
+          class="w-fit max-w-full rounded-xl bg-white/80 px-3 py-2 text-center text-sm leading-5 text-teal-950 shadow-sm">
+          {{ 'ABOUT_US.ACTIVITY_AREA_ONE' | translate }}</li>
+        <li
+          class="w-fit max-w-full rounded-xl bg-white/80 px-3 py-2 text-center text-sm leading-5 text-teal-950 shadow-sm">
+          {{ 'ABOUT_US.ACTIVITY_AREA_TWO' | translate }}</li>
+        <li
+          class="w-fit max-w-full rounded-xl bg-white/80 px-3 py-2 text-center text-sm leading-5 text-teal-950 shadow-sm">
+          {{ 'ABOUT_US.ACTIVITY_AREA_THREE' | translate }}</li>
+        <li
+          class="w-fit max-w-full rounded-xl bg-white/80 px-3 py-2 text-center text-sm leading-5 text-teal-950 shadow-sm">
+          {{ 'ABOUT_US.ACTIVITY_AREA_FOUR' | translate }}</li>
+      </ul>
+      <p class="mb-5 text-sm leading-7 text-center text-slate-600 md:text-base md:leading-8">{{
+        'ABOUT_US.ACTIVITIES_INFO' | translate }}</p>
     </section>
 
-    <section aria-labelledby="about-values-title">
-      <h2 id="about-values-title" class="mb-3 text-2xl font-bold text-teal-950 md:text-3xl">{{ 'ABOUT_US.VALUES_TITLE' |
-        translate }}</h2>
-      <ul class="grid gap-3 sm:grid-cols-2">
-        <li class="rounded-2xl bg-white/80 p-4 text-sm leading-6 shadow-sm md:text-base">{{ 'ABOUT_US.VALUE_ONE' |
-          translate }}</li>
-        <li class="rounded-2xl bg-white/80 p-4 text-sm leading-6 shadow-sm md:text-base">{{ 'ABOUT_US.VALUE_TWO' |
-          translate }}</li>
-        <li class="rounded-2xl bg-white/80 p-4 text-sm leading-6 shadow-sm md:text-base">{{ 'ABOUT_US.VALUE_THREE' |
-          translate }}</li>
-      </ul>
-    </section>
   </section>
 </main>
