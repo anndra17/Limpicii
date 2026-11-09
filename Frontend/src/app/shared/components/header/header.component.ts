@@ -14,8 +14,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	private readonly translation = inject(TranslationService);
 	get titleImage(): string {
 		return this.translation.language() === 'ro'
-			? 'assets/images/limpicii-title-ro.png'
-			: 'assets/images/limpicii-title-en.png';
+			? 'assets/images/title-ro.png'
+			: 'assets/images/title-en.png';
 	}
 
 	images: string[] = [
