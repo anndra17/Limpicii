@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { TranslatePipe } from '../../shared/pipes/translate.pipe';
+import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-activity-history-page',
@@ -8,3 +8,4 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ActivityHistoryPageComponent {}
+

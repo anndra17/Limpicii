@@ -14,12 +14,12 @@ export const routes: Routes = [
     },
     { path: 'history',
       loadComponent: () =>
-        import('./features/history/activity-history-page.component')
+        import('./features/about-us/history/activity-history-page.component')
           .then((module) => module.ActivityHistoryPageComponent)
     },
     { path: 'team',
       loadComponent: () =>
-        import('./features/activities/team/team-page.component')
+        import('./features/about-us/team/team-page.component')
           .then((module) => module.TeamPageComponent)
     },
     { path: 'news',
@@ -45,3 +45,4 @@ export const routes: Routes = [
     { path: '**', 
       redirectTo: '' }
 ];
+
