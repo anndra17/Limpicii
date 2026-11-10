@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
 import { TranslationService } from '../../core/services/translation.service';
 
-type ActivityId = 'tennis' | 'athletics' | 'skiing' | 'gymnastics' | 'hiking' | 'swimming';
+type ActivityId = 'tennis' | 'athletics' | 'skiing' | 'fitness' | 'hiking' | 'swimming';
 
 const titleKeys: Record<ActivityId, string> = {
   tennis: 'ACTIVITIES.TENNIS',
   athletics: 'ACTIVITIES.ATHLETICS',
   skiing: 'ACTIVITIES.SKI',
-  gymnastics: 'ACTIVITIES.GYMNASTICS',
+  fitness: 'ACTIVITIES.FITNESS',
   hiking: 'ACTIVITIES.HIKING',
   swimming: 'ACTIVITIES.SWIMMING',
 };
@@ -24,7 +24,7 @@ const activityImages: Record<ActivityId, string[]> = {
     '/assets/images/news/brasovMarathon.jpg',
   ],
   skiing: ['/assets/images/activities/LimpiciiSki.jpeg', '/assets/images/munti-wide.png'],
-  gymnastics: ['/assets/images/activities/LimpiciiGymnastics.jpeg'],
+  fitness: ['/assets/images/activities/LimpiciiFitness.jpeg'],
   hiking: [
     '/assets/images/activities/LimpiciiHike.jpeg',
     '/assets/images/LimpiciiHike.jpg',

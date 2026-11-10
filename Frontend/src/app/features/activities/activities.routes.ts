@@ -32,10 +32,10 @@ export const activitiesRoutes: Routes = [
         .then((module) => module.SkiingPageComponent)
   },
   {
-    path: 'gymnastics',
+    path: 'fitness',
     loadComponent: () =>
-      import('./gymnastics/gymnastics-page.component')
-        .then((module) => module.GymnasticsPageComponent)
+      import('./fitness/fitness-page.component')
+        .then((module) => module.FitnessPageComponent)
   },
   {
     path: 'hiking',
