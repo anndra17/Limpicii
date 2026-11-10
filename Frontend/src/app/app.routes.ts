@@ -17,6 +17,11 @@ export const routes: Routes = [
         import('./features/about-us/history/activity-history-page.component')
           .then((module) => module.ActivityHistoryPageComponent)
     },
+    { path: 'rucsacul-limpicului',
+      loadComponent: () =>
+        import('./features/about-us/backpack/backpack-page.component')
+          .then((module) => module.BackpackPageComponent)
+    },
     { path: 'team',
       loadComponent: () =>
         import('./features/about-us/team/team-page.component')

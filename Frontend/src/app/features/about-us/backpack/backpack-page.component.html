@@ -1,0 +1,70 @@
+<main class="overflow-hidden bg-amber-50 text-slate-800">
+  <section class="mx-auto max-w-6xl px-6 pb-16 pt-14 md:pt-20" aria-labelledby="backpack-title">
+    <h1 id="backpack-title" class="mx-auto max-w-4xl text-center text-3xl font-bold text-teal-950 md:text-4xl">{{ 'BACKPACK.TITLE' | translate }}</h1>
+
+    <div class="mx-auto mt-10 max-w-5xl">
+      <section class="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm md:p-9" aria-labelledby="backpack-buying-title">
+        <h2 id="backpack-buying-title" class="text-xl font-bold text-teal-950 md:text-2xl">{{ 'BACKPACK.BUYING_TITLE' | translate }}</h2>
+        <dl class="mt-6 grid gap-5 md:grid-cols-3">
+          <div class="rounded-2xl bg-amber-50 p-5">
+            <dt class="font-bold text-emerald-800">{{ 'BACKPACK.SIZE_TITLE' | translate }}</dt>
+            <dd class="mt-2 text-sm leading-7 text-slate-600 md:text-base">{{ 'BACKPACK.SIZE_TEXT' | translate }}</dd>
+          </div>
+          <div class="rounded-2xl bg-amber-50 p-5">
+            <dt class="font-bold text-emerald-800">{{ 'BACKPACK.MATERIAL_TITLE' | translate }}</dt>
+            <dd class="mt-2 text-sm leading-7 text-slate-600 md:text-base">{{ 'BACKPACK.MATERIAL_TEXT' | translate }}</dd>
+          </div>
+          <div class="rounded-2xl bg-amber-50 p-5">
+            <dt class="font-bold text-emerald-800">{{ 'BACKPACK.CUT_TITLE' | translate }}</dt>
+            <dd class="mt-2 text-sm leading-7 text-slate-600 md:text-base">{{ 'BACKPACK.CUT_TEXT' | translate }}</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="mt-12" aria-labelledby="backpack-contents-title">
+        <h2 id="backpack-contents-title" class="text-center text-2xl font-bold text-teal-950 md:text-3xl">{{ 'BACKPACK.CONTENTS_TITLE' | translate }}</h2>
+
+        <div class="mt-7 grid gap-5 lg:grid-cols-3">
+          <article class="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-bold text-teal-950">{{ 'BACKPACK.SHORT_TITLE' | translate }}</h3>
+            <ul class="mt-4 list-disc space-y-3 pl-5 text-sm leading-7 text-slate-600 md:text-base">
+              <li>{{ 'BACKPACK.SHORT_ITEM_ONE' | translate }}</li>
+              <li>{{ 'BACKPACK.SHORT_ITEM_TWO' | translate }}</li>
+              <li>{{ 'BACKPACK.SHORT_ITEM_THREE' | translate }}</li>
+            </ul>
+            <p class="mt-5 border-t border-emerald-100 pt-4 text-sm leading-7 text-slate-600 md:text-base">{{ 'BACKPACK.FOOTWEAR' | translate }}</p>
+          </article>
+
+          <article class="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-bold text-teal-950">{{ 'BACKPACK.DAY_TITLE' | translate }}</h3>
+            <ul class="mt-4 list-disc space-y-3 pl-5 text-sm leading-7 text-slate-600 md:text-base">
+              <li>{{ 'BACKPACK.DAY_ITEM_ONE' | translate }}</li>
+              <li>{{ 'BACKPACK.DAY_ITEM_TWO' | translate }}</li>
+              <li>{{ 'BACKPACK.DAY_ITEM_THREE' | translate }}</li>
+            </ul>
+          </article>
+
+          <article class="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-bold text-teal-950">{{ 'BACKPACK.LONG_TITLE' | translate }}</h3>
+            <ul class="mt-4 list-disc space-y-3 pl-5 text-sm leading-7 text-slate-600 md:text-base">
+              <li>{{ 'BACKPACK.LONG_ITEM_ONE' | translate }}</li>
+              <li>{{ 'BACKPACK.LONG_ITEM_TWO' | translate }}</li>
+              <li>{{ 'BACKPACK.LONG_ITEM_THREE' | translate }}</li>
+              <li>{{ 'BACKPACK.LONG_ITEM_FOUR' | translate }}</li>
+              <li>{{ 'BACKPACK.LONG_ITEM_FIVE' | translate }}</li>
+              <li>{{ 'BACKPACK.LONG_ITEM_SIX' | translate }}</li>
+              <li>{{ 'BACKPACK.LONG_ITEM_SEVEN' | translate }}</li>
+              <li>{{ 'BACKPACK.LONG_ITEM_EIGHT' | translate }}</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <aside class="mt-8 space-y-4 rounded-3xl border border-amber-200 bg-amber-100/70 p-6 md:p-8" [attr.aria-label]="'BACKPACK.REMINDER_TITLE' | translate">
+        <h2 class="font-bold text-teal-950">{{ 'BACKPACK.REMINDER_TITLE' | translate }}</h2>
+        <p class="text-sm leading-7 text-slate-700 md:text-base">{{ 'BACKPACK.REMINDER_BAGS' | translate }}</p>
+        <p class="border-t border-amber-300 pt-4 text-sm leading-7 text-slate-700 md:text-base">{{ 'BACKPACK.REMINDER_TRAIN' | translate }}</p>
+      </aside>
+    </div>
+  </section>
+</main>
