@@ -1,3 +1,20 @@
+.activity-shortcut__icon {
+	width: clamp(1.5rem, 10vw, 4rem);
+	height: clamp(1.5rem, 10vw, 4rem);
+}
+
+.activity-shortcut__label {
+	font-size: 1.125rem;
+	text-align: center;
+}
+
+@media (max-width: 767px) {
+	.activity-shortcut__label {
+		font-size: clamp(.5rem, 2.4vw, .75rem);
+		line-height: 1.15;
+	}
+}
+
 .activity-shortcut__icon,
 .activity-shortcut__label {
 	transition: filter 180ms ease, color 180ms ease;

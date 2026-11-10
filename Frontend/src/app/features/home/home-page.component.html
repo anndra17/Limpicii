@@ -1,47 +1,47 @@
 <app-header></app-header>
 <section id="activitati" class="w-full bg-white py-6" aria-label="{{ 'ACTIVITIES.SECTION' | translate }}">
 	<div
-		class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-wrap md:flex-nowrap gap-2 md:gap-8 justify-between items-center">
+		class="activity-shortcuts mx-auto grid w-full max-w-7xl grid-cols-6 items-start gap-0 px-1 sm:px-6 lg:px-8 md:items-center md:gap-8">
 		<a routerLink="/activities/tennis"
-			class="activity-shortcut group flex flex-col items-center flex-1 rounded-lg p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700">
+			class="activity-shortcut group flex min-w-0 flex-col items-center rounded-lg px-0.5 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700">
 			<img src="assets/icons/tennisIcon.png" alt=""
-				class="activity-shortcut__icon w-10 h-10 md:w-16 md:h-16 object-contain group-hover:animate-sport group-focus-visible:animate-sport motion-reduce:group-hover:animate-none motion-reduce:group-focus-visible:animate-none" />
-			<span class="activity-shortcut__label mt-1 text-xs md:text-lg font-semibold text-gray-700">
+				class="activity-shortcut__icon object-contain group-hover:animate-sport group-focus-visible:animate-sport motion-reduce:group-hover:animate-none motion-reduce:group-focus-visible:animate-none" />
+			<span class="activity-shortcut__label mt-1 font-semibold text-gray-700">
 				{{ 'ACTIVITIES.TENNIS' | translate }}
 			</span>
 		</a>
 		<a routerLink="/activities/skiing"
-			class="activity-shortcut group flex flex-col items-center flex-1 rounded-lg p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700">
+			class="activity-shortcut group flex min-w-0 flex-col items-center rounded-lg px-0.5 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700">
 			<img src="assets/icons/skiIcon.png" alt=""
-				class="activity-shortcut__icon w-10 h-10 md:w-16 md:h-16 object-contain group-hover:animate-sport group-focus-visible:animate-sport motion-reduce:group-hover:animate-none motion-reduce:group-focus-visible:animate-none" />
-			<span class="activity-shortcut__label mt-1 text-xs md:text-lg font-semibold text-gray-700">{{ 'ACTIVITIES.SKI' | translate }}</span>
+				class="activity-shortcut__icon object-contain group-hover:animate-sport group-focus-visible:animate-sport motion-reduce:group-hover:animate-none motion-reduce:group-focus-visible:animate-none" />
+			<span class="activity-shortcut__label mt-1 font-semibold text-gray-700">{{ 'ACTIVITIES.SKI' | translate }}</span>
 		</a>
 		<a routerLink="/activities/swimming"
-			class="activity-shortcut group flex flex-col items-center flex-1 rounded-lg p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700">
+			class="activity-shortcut group flex min-w-0 flex-col items-center rounded-lg px-0.5 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700">
 			<img src="assets/icons/swimIcon.png" alt=""
-				class="activity-shortcut__icon w-10 h-10 md:w-16 md:h-16 object-contain group-hover:animate-sport group-focus-visible:animate-sport motion-reduce:group-hover:animate-none motion-reduce:group-focus-visible:animate-none" />
-			<span class="activity-shortcut__label mt-1 text-xs md:text-lg font-semibold text-gray-700">{{ 'ACTIVITIES.SWIMMING' | translate
+				class="activity-shortcut__icon object-contain group-hover:animate-sport group-focus-visible:animate-sport motion-reduce:group-hover:animate-none motion-reduce:group-focus-visible:animate-none" />
+			<span class="activity-shortcut__label mt-1 font-semibold text-gray-700">{{ 'ACTIVITIES.SWIMMING' | translate
 				}}</span>
 		</a>
 		<a routerLink="/activities/hiking"
-			class="activity-shortcut group flex flex-col items-center flex-1 rounded-lg p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700">
+			class="activity-shortcut group flex min-w-0 flex-col items-center rounded-lg px-0.5 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700">
 			<img src="assets/icons/hikingIcon.png" alt=""
-				class="activity-shortcut__icon w-10 h-10 md:w-16 md:h-16 object-contain group-hover:animate-sport group-focus-visible:animate-sport motion-reduce:group-hover:animate-none motion-reduce:group-focus-visible:animate-none" />
-			<span class="activity-shortcut__label mt-1 text-xs md:text-lg font-semibold text-gray-700">{{ 'ACTIVITIES.HIKING' | translate
+				class="activity-shortcut__icon object-contain group-hover:animate-sport group-focus-visible:animate-sport motion-reduce:group-hover:animate-none motion-reduce:group-focus-visible:animate-none" />
+			<span class="activity-shortcut__label mt-1 font-semibold text-gray-700">{{ 'ACTIVITIES.HIKING' | translate
 				}}</span>
 		</a>
 		<a routerLink="/activities/athletics"
-			class="activity-shortcut group flex flex-col items-center flex-1 rounded-lg p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700">
+			class="activity-shortcut group flex min-w-0 flex-col items-center rounded-lg px-0.5 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700">
 			<img src="assets/icons/athleticsIcon.png" alt=""
-				class="activity-shortcut__icon w-10 h-10 md:w-16 md:h-16 object-contain group-hover:animate-sport group-focus-visible:animate-sport motion-reduce:group-hover:animate-none motion-reduce:group-focus-visible:animate-none" />
-			<span class="activity-shortcut__label mt-1 text-xs md:text-lg font-semibold text-gray-700">{{ 'ACTIVITIES.ATHLETICS' | translate
+				class="activity-shortcut__icon object-contain group-hover:animate-sport group-focus-visible:animate-sport motion-reduce:group-hover:animate-none motion-reduce:group-focus-visible:animate-none" />
+			<span class="activity-shortcut__label mt-1 font-semibold text-gray-700">{{ 'ACTIVITIES.ATHLETICS' | translate
 				}}</span>
 		</a>
 		<a routerLink="/activities/gymnastics"
-			class="activity-shortcut group flex flex-col items-center flex-1 rounded-lg p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700">
+			class="activity-shortcut group flex min-w-0 flex-col items-center rounded-lg px-0.5 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700">
 			<img src="assets/icons/gymnasticsIcon.png" alt=""
-				class="activity-shortcut__icon w-10 h-10 md:w-16 md:h-16 object-contain group-hover:animate-sport group-focus-visible:animate-sport motion-reduce:group-hover:animate-none motion-reduce:group-focus-visible:animate-none" />
-			<span class="activity-shortcut__label mt-1 text-xs md:text-lg font-semibold text-gray-700">{{ 'ACTIVITIES.GYMNASTICS' | translate
+				class="activity-shortcut__icon object-contain group-hover:animate-sport group-focus-visible:animate-sport motion-reduce:group-hover:animate-none motion-reduce:group-focus-visible:animate-none" />
+			<span class="activity-shortcut__label mt-1 font-semibold text-gray-700">{{ 'ACTIVITIES.GYMNASTICS' | translate
 				}}</span>
 		</a>
 	</div>
