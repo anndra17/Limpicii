@@ -14,6 +14,7 @@ import { RouterLink } from '@angular/router';
 export class NavBarComponent {
 	readonly translationService = inject(TranslationService);
   isMenuOpen = false;
+  openMobileSubmenu: 'about' | 'activities' | null = null;
 
 	setLanguage(language: Language): void {
 		void this.translationService.setLanguage(language);
@@ -21,5 +22,12 @@ export class NavBarComponent {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    if (!this.isMenuOpen) {
+      this.openMobileSubmenu = null;
+    }
+  }
+
+  toggleMobileSubmenu(section: 'about' | 'activities'): void {
+    this.openMobileSubmenu = this.openMobileSubmenu === section ? null : section;
   }
 }

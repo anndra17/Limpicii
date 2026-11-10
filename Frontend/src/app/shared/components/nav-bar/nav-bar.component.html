@@ -50,7 +50,7 @@
 
       <!-- Buton hamburger -->
       <div class="flex md:hidden items-center">
-        <button (click)="toggleMenu()" class="text-white focus:outline-none">
+        <button (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-controls="mobile-menu" class="flex min-h-11 min-w-11 items-center justify-center rounded-lg text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">
           <svg xmlns="http://www.w3.org/2000/svg" 
                class="h-8 w-8" 
                fill="none" 
@@ -66,33 +66,56 @@
     </div>
   </div>
 
-  <!-- Meniu mic (mobil) -->
-  <div *ngIf="isMenuOpen" class="md:hidden  bg-gradient-to-r from-teal-950  via-emerald-700  to-cyan-700">
-    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-      <a href="#top" class="block text-white py-2 px-3 rounded hover:bg-teal-300">{{ 'NAV.HOME' | translate }}</a>
-      <div class="rounded">
-        <span class="block px-3 pt-2 pb-1 text-white">{{ 'NAV.ABOUT' | translate }}</span>
-        <div class="grid grid-cols-2 gap-x-2">
-          <a routerLink="/about-us" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'NAV.ABOUT' | translate }}</a>
-          <a routerLink="/team" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.TEAM' | translate }}</a>
-          <a routerLink="/history" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.HISTORY' | translate }}</a>
+  <!-- Meniu mobil -->
+  <div *ngIf="isMenuOpen" id="mobile-menu" class="w-full bg-gradient-to-r from-teal-950 via-emerald-700 to-cyan-700 md:hidden">
+    <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+      <a href="#top" (click)="toggleMenu()" class="flex min-h-11 items-center rounded-lg px-3 py-2 text-white transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">{{ 'NAV.HOME' | translate }}</a>
+
+      <div class="rounded-lg">
+        <button
+          type="button"
+          (click)="toggleMobileSubmenu('about')"
+          [attr.aria-expanded]="openMobileSubmenu === 'about'"
+          aria-controls="mobile-about-submenu"
+          class="flex min-h-11 w-full items-center justify-between rounded-lg px-3 py-2 text-left text-white transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">
+          <span>{{ 'NAV.ABOUT' | translate }}</span>
+          <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 transition-transform duration-200" [class.rotate-180]="openMobileSubmenu === 'about'">
+            <path fill-rule="evenodd" d="M5.22 7.47a.75.75 0 0 1 1.06 0L10 11.19l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 8.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <div *ngIf="openMobileSubmenu === 'about'" id="mobile-about-submenu" class="grid grid-cols-1 gap-2 pb-2 pl-4">
+          <a routerLink="/about-us" (click)="toggleMenu()" class="flex min-h-11 items-center rounded-lg px-4 py-2 text-sm text-emerald-50/85 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">{{ 'NAV.ABOUT' | translate }}</a>
+          <a routerLink="/team" (click)="toggleMenu()" class="flex min-h-11 items-center rounded-lg px-4 py-2 text-sm text-emerald-50/85 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">{{ 'ACTIVITIES.TEAM' | translate }}</a>
+          <a routerLink="/history" (click)="toggleMenu()" class="flex min-h-11 items-center rounded-lg px-4 py-2 text-sm text-emerald-50/85 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">{{ 'ACTIVITIES.HISTORY' | translate }}</a>
         </div>
       </div>
-      <div class="rounded">
-        <span class="block px-3 pt-2 pb-1 text-white">{{ 'NAV.ACTIVITIES' | translate }}</span>
-        <div class="grid grid-cols-2 gap-x-2">
-          <a routerLink="/activities/tennis" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.TENNIS' | translate }}</a>
-          <a routerLink="/activities/athletics" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.ATHLETICS' | translate }}</a>
-          <a routerLink="/activities/skiing" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.SKI' | translate }}</a>
-          <a routerLink="/activities/gymnastics" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.GYMNASTICS' | translate }}</a>
-          <a routerLink="/activities/hiking" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.HIKING' | translate }}</a>
-          <a routerLink="/activities/swimming" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.SWIMMING' | translate }}</a>
-          <a routerLink="/activities/camps" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.CAMPS' | translate }}</a>
-          <a routerLink="/activities/competitions" (click)="toggleMenu()" class="block rounded py-2 px-5 text-sm text-white hover:bg-white/15">{{ 'ACTIVITIES.COMPETITIONS' | translate }}</a>
+
+      <div class="rounded-lg">
+        <button
+          type="button"
+          (click)="toggleMobileSubmenu('activities')"
+          [attr.aria-expanded]="openMobileSubmenu === 'activities'"
+          aria-controls="mobile-activities-submenu"
+          class="flex min-h-11 w-full items-center justify-between rounded-lg px-3 py-2 text-left text-white transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">
+          <span>{{ 'NAV.ACTIVITIES' | translate }}</span>
+          <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 transition-transform duration-200" [class.rotate-180]="openMobileSubmenu === 'activities'">
+            <path fill-rule="evenodd" d="M5.22 7.47a.75.75 0 0 1 1.06 0L10 11.19l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 8.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <div *ngIf="openMobileSubmenu === 'activities'" id="mobile-activities-submenu" class="grid grid-cols-2 gap-2 pb-2 pl-4">
+          <a routerLink="/activities/tennis" (click)="toggleMenu()" class="flex min-h-11 items-center rounded-lg px-3 py-2 text-sm text-emerald-50/85 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">{{ 'ACTIVITIES.TENNIS' | translate }}</a>
+          <a routerLink="/activities/athletics" (click)="toggleMenu()" class="flex min-h-11 items-center rounded-lg px-3 py-2 text-sm text-emerald-50/85 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">{{ 'ACTIVITIES.ATHLETICS' | translate }}</a>
+          <a routerLink="/activities/skiing" (click)="toggleMenu()" class="flex min-h-11 items-center rounded-lg px-3 py-2 text-sm text-emerald-50/85 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">{{ 'ACTIVITIES.SKI' | translate }}</a>
+          <a routerLink="/activities/gymnastics" (click)="toggleMenu()" class="flex min-h-11 items-center rounded-lg px-3 py-2 text-sm text-emerald-50/85 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">{{ 'ACTIVITIES.GYMNASTICS' | translate }}</a>
+          <a routerLink="/activities/hiking" (click)="toggleMenu()" class="flex min-h-11 items-center rounded-lg px-3 py-2 text-sm text-emerald-50/85 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">{{ 'ACTIVITIES.HIKING' | translate }}</a>
+          <a routerLink="/activities/swimming" (click)="toggleMenu()" class="flex min-h-11 items-center rounded-lg px-3 py-2 text-sm text-emerald-50/85 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">{{ 'ACTIVITIES.SWIMMING' | translate }}</a>
+          <a routerLink="/activities/camps" (click)="toggleMenu()" class="flex min-h-11 items-center rounded-lg px-3 py-2 text-sm text-emerald-50/85 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">{{ 'ACTIVITIES.CAMPS' | translate }}</a>
+          <a routerLink="/activities/competitions" (click)="toggleMenu()" class="flex min-h-11 items-center rounded-lg px-3 py-2 text-sm text-emerald-50/85 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">{{ 'ACTIVITIES.COMPETITIONS' | translate }}</a>
         </div>
       </div>
-      <a routerLink="/news" (click)="toggleMenu()" class="block text-white py-2 px-3 rounded hover:bg-teal-300">{{ 'NAV.NEWS' | translate }}</a>
-      <a routerLink="/contact" (click)="toggleMenu()" class="block text-white py-2 px-3 rounded hover:bg-teal-300">{{ 'NAV.CONTACT' | translate }}</a>
+
+      <a routerLink="/news" (click)="toggleMenu()" class="flex min-h-11 items-center rounded-lg px-3 py-2 text-white transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">{{ 'NAV.NEWS' | translate }}</a>
+      <a routerLink="/contact" (click)="toggleMenu()" class="flex min-h-11 items-center rounded-lg px-3 py-2 text-white transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-300">{{ 'NAV.CONTACT' | translate }}</a>
       <div class="flex gap-2 px-3 py-2" aria-label="{{ 'LANGUAGE.LABEL' | translate }}">
         <button type="button" (click)="setLanguage('ro')" [attr.aria-pressed]="translationService.language() === 'ro'" [attr.aria-label]="'LANGUAGE.RO' | translate" class="rounded bg-white/10 p-2">
           <img src="assets/images/flags/ro.png" alt="" class="h-4 w-6 rounded-sm object-cover">
