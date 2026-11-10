@@ -2,21 +2,32 @@
   <section class="mx-auto max-w-6xl px-6 pb-8 pt-14 md:pb-12 md:pt-20" aria-labelledby="activity-title">
     <h1 id="activity-title" class="mx-auto max-w-4xl text-center text-3xl font-bold text-teal-950 md:text-4xl">{{ title() }}</h1>
     <p class="mx-auto mt-5 max-w-3xl text-center text-sm italic leading-6 text-slate-600 md:text-base md:leading-7">{{ copy().intro }}</p>
-    <p class="mx-auto mt-5 text-center text-sm text-slate-600">
-      {{ labels().level }}: <strong class="font-bold text-emerald-800">{{ copy().level }}</strong>
-    </p>
-    <img [src]="activityImage()" [alt]="title()" loading="lazy" class="mx-auto mt-10 aspect-video w-full max-w-5xl rounded-3xl object-cover shadow-md" />
+    <p class="mx-auto mt-6 max-w-4xl text-center text-sm leading-7 text-slate-600 md:text-base md:leading-8">{{ copy().description }}</p>
+    @if (copy().additionalDescription) {
+      <p class="mx-auto mt-4 max-w-4xl text-center text-sm leading-7 text-slate-600 md:text-base md:leading-8">{{ copy().additionalDescription }}</p>
+    }
+    @if (activityGallery().length > 1) {
+      <div class="mx-auto mt-10 grid w-full max-w-5xl grid-cols-1 gap-3 md:grid-cols-[1.6fr_1fr]" role="group" [attr.aria-label]="title()">
+        <img [src]="activityGallery()[0]" [alt]="title()" fetchpriority="high" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-md md:aspect-auto md:min-h-[28rem]" />
+        <div class="grid grid-cols-2 gap-3 md:grid-cols-1 md:grid-rows-2">
+          @if (activityGallery().length === 2) {
+            <img [src]="activityGallery()[1]" [alt]="title()" loading="lazy" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-sm md:row-span-2 md:aspect-auto md:min-h-0 md:h-full" />
+          } @else {
+            @for (image of activityGallery().slice(1); track image) {
+              <img [src]="image" [alt]="title()" loading="lazy" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-sm md:aspect-auto md:min-h-0 md:h-full" />
+            }
+          }
+        </div>
+      </div>
+    } @else {
+      <img [src]="activityGallery()[0]" [alt]="title()" fetchpriority="high" class="mx-auto mt-10 aspect-video w-full max-w-5xl rounded-3xl object-cover shadow-md" />
+    }
   </section>
 
-  <section class="mx-auto max-w-4xl px-6 pb-12 md:pb-16" aria-labelledby="activity-about-title">
+  <section class="mx-auto max-w-4xl px-6 pb-12 md:pb-16" aria-labelledby="activity-location-title">
     <div class="space-y-8">
-      <article>
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">{{ labels().about }}</p>
-        <h2 id="activity-about-title" class="mb-3 text-2xl font-bold text-teal-950 md:text-3xl">{{ title() }}</h2>
-        <p class="text-sm leading-7 text-slate-600 md:text-base md:leading-8">{{ copy().description }}</p>
-      </article>
       <article class="border-t border-emerald-200 pt-6">
-        <h3 class="mb-2 text-lg font-bold text-teal-950">{{ labels().location }}</h3>
+        <h2 id="activity-location-title" class="mb-2 text-lg font-bold text-teal-950">{{ labels().location }}</h2>
         <p class="text-sm leading-7 text-slate-600 md:text-base md:leading-8">{{ copy().location }}</p>
       </article>
     </div>
