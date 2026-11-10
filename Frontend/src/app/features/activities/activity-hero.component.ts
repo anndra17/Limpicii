@@ -39,9 +39,6 @@ export class ActivityHeroComponent {
       level: translate('LEVEL'),
       about: translate('ABOUT'),
       location: translate('LOCATION'),
-      events: translate('EVENTS'),
-      competitions: translate('COMPETITIONS'),
-      camps: translate('CAMPS'),
     };
   });
   protected readonly copy = computed(() => {
@@ -52,8 +49,6 @@ export class ActivityHeroComponent {
       level: translate('LEVEL'),
       description: translate('DESCRIPTION'),
       location: translate('LOCATION'),
-      competitions: translate('COMPETITIONS'),
-      camps: translate('CAMPS'),
     };
   });
 
