@@ -22,6 +22,11 @@ export const routes: Routes = [
         import('./features/about-us/backpack/backpack-page.component')
           .then((module) => module.BackpackPageComponent)
     },
+    { path: 'codul-limpicului',
+      loadComponent: () =>
+        import('./features/about-us/code/code-page.component')
+          .then((module) => module.CodePageComponent)
+    },
     { path: 'team',
       loadComponent: () =>
         import('./features/about-us/team/team-page.component')
