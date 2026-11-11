@@ -1,35 +1,46 @@
-<main class="overflow-hidden bg-amber-50 text-slate-800">
-  <section class="mx-auto max-w-6xl px-6 pb-8 pt-14 md:pb-12 md:pt-20" aria-labelledby="activity-title">
+<main class="overflow-hidden bg-amber-50 text-teal-950">
+  <section class="mx-auto max-w-6xl px-6 pb-6 pt-14 md:pb-8 md:pt-20" aria-labelledby="activity-title">
     <h1 id="activity-title" class="mx-auto max-w-4xl text-center text-3xl font-bold text-teal-950 md:text-4xl">{{ title() }}</h1>
-    <p class="mx-auto mt-5 max-w-3xl text-center text-sm italic leading-6 text-slate-600 md:text-base md:leading-7">{{ copy().intro }}</p>
-    <p class="mx-auto mt-6 max-w-4xl text-center text-sm leading-7 text-slate-600 md:text-base md:leading-8">{{ copy().description }}</p>
-    @if (copy().additionalDescription) {
-      <p class="mx-auto mt-4 max-w-4xl text-center text-sm leading-7 text-slate-600 md:text-base md:leading-8">{{ copy().additionalDescription }}</p>
-    }
-    @if (activityGallery().length > 1) {
-      <div class="mx-auto mt-10 grid w-full max-w-5xl grid-cols-1 gap-3 md:grid-cols-[1.6fr_1fr]" role="group" [attr.aria-label]="title()">
-        <img [src]="activityGallery()[0]" [alt]="title()" fetchpriority="high" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-md md:aspect-auto md:min-h-[28rem]" />
-        <div class="grid grid-cols-2 gap-3 md:grid-cols-1 md:grid-rows-2">
-          @if (activityGallery().length === 2) {
-            <img [src]="activityGallery()[1]" [alt]="title()" loading="lazy" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-sm md:row-span-2 md:aspect-auto md:min-h-0 md:h-full" />
-          } @else {
-            @for (image of activityGallery().slice(1); track image) {
-              <img [src]="image" [alt]="title()" loading="lazy" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-sm md:aspect-auto md:min-h-0 md:h-full" />
-            }
-          }
-        </div>
-      </div>
-    } @else {
-      <img [src]="activityGallery()[0]" [alt]="title()" fetchpriority="high" class="mx-auto mt-10 aspect-video w-full max-w-5xl rounded-3xl object-cover shadow-md" />
-    }
+    <p class="mx-auto mt-5 max-w-3xl text-center text-sm italic leading-6 text-teal-950 md:text-base md:leading-7">{{ copy().intro }}</p>
   </section>
 
-  <section class="mx-auto max-w-4xl px-6 pb-12 md:pb-16" aria-labelledby="activity-location-title">
-    <div class="space-y-8">
-      <article class="border-t border-emerald-200 pt-6">
-        <h2 id="activity-location-title" class="mb-2 text-lg font-bold text-teal-950">{{ labels().location }}</h2>
-        <p class="text-sm leading-7 text-slate-600 md:text-base md:leading-8">{{ copy().location }}</p>
-      </article>
+  <section class="bg-amber-50 px-6 py-6 md:py-8" aria-labelledby="activity-description-title">
+    <div class="mx-auto max-w-5xl">
+      <h2 id="activity-description-title" class="sr-only">{{ labels().about }}</h2>
+      <p class="text-center text-base leading-8 text-teal-950 md:text-lg md:leading-9">{{ copy().description }}</p>
+      @if (copy().additionalDescription) {
+        <p class="mt-4 text-center text-base leading-8 text-teal-950 md:text-lg md:leading-9">{{ copy().additionalDescription }}</p>
+      }
     </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl space-y-8 px-6 pb-8 pt-4 md:space-y-10 md:pb-10 md:pt-6" [attr.aria-label]="title()">
+    @if (copy().trainer) {
+      <article class="grid items-center gap-6 md:grid-cols-[minmax(16rem,0.8fr)_minmax(0,1.7fr)] md:gap-10" aria-labelledby="activity-trainer-title">
+        <img [src]="trainerImage()" [alt]="title()" fetchpriority="high" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-md md:aspect-[5/4]" />
+        <div>
+          <h2 id="activity-trainer-title" class="mb-3 text-2xl font-bold text-teal-950 md:text-3xl">{{ labels().trainer }}</h2>
+          <p class="text-base leading-8 text-teal-950 md:text-lg md:leading-9">{{ copy().trainer }}</p>
+        </div>
+      </article>
+
+    }
+
+    @if (copy().location) {
+      <article class="grid items-center gap-6 md:grid-cols-[minmax(0,1.7fr)_minmax(16rem,0.8fr)] md:gap-10" aria-labelledby="activity-location-title">
+        <div>
+          <h2 id="activity-location-title" class="mb-3 text-2xl font-bold text-teal-950 md:text-3xl">{{ labels().location }}</h2>
+          <p class="text-base leading-8 text-teal-950 md:text-lg md:leading-9">{{ copy().location }}</p>
+        </div>
+        <img [src]="locationImage()" [alt]="title()" loading="lazy" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-md md:aspect-[5/4]" />
+      </article>
+    }
+
+    @if (copy().extra) {
+      <article class="mx-auto w-full max-w-5xl border-t border-emerald-200 pt-8" aria-labelledby="activity-extra-title">
+        <h2 id="activity-extra-title" class="mb-3 text-center text-2xl font-bold text-teal-950 md:text-3xl">{{ labels().extra }}</h2>
+        <p class="whitespace-pre-line text-center text-base leading-8 text-teal-950 md:text-lg md:leading-9">{{ copy().extra }}</p>
+      </article>
+    }
   </section>
 </main>

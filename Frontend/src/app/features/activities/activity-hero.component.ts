@@ -48,7 +48,10 @@ export class ActivityHeroComponent {
   protected readonly labels = computed(() => {
     const translate = (key: string) => this.translationService.translate(`ACTIVITY_PAGES.COMMON.${key}`);
     return {
+      about: translate('ABOUT'),
+      trainer: translate('TRAINER'),
       location: translate('LOCATION'),
+      extra: translate('EXTRA'),
     };
   });
   protected readonly copy = computed(() => {
@@ -58,8 +61,13 @@ export class ActivityHeroComponent {
       intro: translate('INTRO'),
       description: translate('DESCRIPTION'),
       additionalDescription: translate('ADDITIONAL_DESCRIPTION'),
+      trainer: translate('TRAINER'),
       location: translate('LOCATION'),
+      extra: translate('EXTRA'),
     };
   });
+
+  protected readonly trainerImage = computed(() => this.activityGallery()[0]);
+  protected readonly locationImage = computed(() => this.activityGallery()[1] ?? this.activityGallery()[0]);
 
 }
