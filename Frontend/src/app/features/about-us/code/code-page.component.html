@@ -38,9 +38,16 @@
             </li>
           }
         </ul>
+        <a
+          href="assets/documents/Codul_Limpicilor.pdf"
+          download="Codul_Limpicilor.pdf"
+          class="mt-6 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl bg-amber-300 px-4 py-3 text-center font-semibold text-teal-950 transition-colors hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-200">
+          <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg>
+          {{ 'CODE.DOWNLOAD_PDF' | translate }}
+        </a>
       </nav>
 
-      <article id="code-selected-content" class="min-h-72 rounded-3xl border border-emerald-900/20 bg-teal-950 p-6 text-[#f3ecdc] shadow-sm md:min-h-[34rem] md:p-8">
+      <article #selectedContent id="code-selected-content" class="scroll-mt-24 min-h-72 rounded-3xl border border-emerald-900/20 bg-teal-950 p-6 text-[#f3ecdc] shadow-sm md:min-h-[34rem] md:p-8">
         <h2 id="code-selected-title" class="text-2xl font-bold text-amber-50 md:text-3xl" aria-live="polite">{{ selectedCategory.titleKey | translate }}</h2>
         <div class="mt-6 space-y-4">
           @if (selectedCategory.subsections.length === 1) {

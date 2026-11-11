@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
 import { NgTemplateOutlet } from '@angular/common';
 import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
 import { CODE_CATEGORIES, type CodeCategory } from './code-content.data';
@@ -10,9 +10,11 @@ import { CODE_CATEGORIES, type CodeCategory } from './code-content.data';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CodePageComponent {
+  @ViewChild('selectedContent') private selectedContent?: ElementRef<HTMLElement>;
+
   readonly categories = CODE_CATEGORIES;
   selectedCategoryId = this.categories[0].id;
-  openSubsectionIndices = new Set<number>(this.categories[0].subsections.length > 1 ? [0] : []);
+  openSubsectionIndices = new Set<number>();
 
   get selectedCategory(): CodeCategory {
     return this.categories.find((category) => category.id === this.selectedCategoryId) ?? this.categories[0];
@@ -20,7 +22,13 @@ export class CodePageComponent {
 
   selectCategory(category: CodeCategory): void {
     this.selectedCategoryId = category.id;
-    this.openSubsectionIndices = new Set(category.subsections.length > 1 ? [0] : []);
+    this.openSubsectionIndices = new Set<number>();
+
+    if (typeof window !== 'undefined' && window.matchMedia('(max-width: 1023px)').matches) {
+      window.requestAnimationFrame(() => {
+        this.selectedContent?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
   }
 
   toggleSubsection(index: number): void {
