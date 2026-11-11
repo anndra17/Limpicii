@@ -368,3 +368,6 @@ FodyWeavers.xsd
 Limpicii.API/appsettings.Development.json
 Inspiration
 .agents/skills/
+
+# Source document for the Limpicii Code page
+/Codul_Limpicilor_transcriere.docx
