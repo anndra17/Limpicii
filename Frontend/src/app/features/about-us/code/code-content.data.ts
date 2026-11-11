@@ -13,17 +13,6 @@ export interface CodeCategory {
 
 export const CODE_CATEGORIES: CodeCategory[] = [
   {
-    id: 'general',
-    titleKey: 'CODE.CONTENTS.GENERAL',
-    subsections: [{
-      titleKey: 'CODE.GENERAL_TITLE',
-      itemKeys: [
-        'CODE.GENERAL.ONE', 'CODE.GENERAL.TWO', 'CODE.GENERAL.THREE', 'CODE.GENERAL.FOUR',
-        'CODE.GENERAL.FIVE', 'CODE.GENERAL.SIX', 'CODE.GENERAL.SEVEN',
-      ],
-    }],
-  },
-  {
     id: 'mountain',
     titleKey: 'CODE.CONTENTS.MOUNTAIN',
     subsections: [

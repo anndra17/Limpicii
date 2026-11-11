@@ -12,7 +12,7 @@ import { CODE_CATEGORIES, type CodeCategory } from './code-content.data';
 export class CodePageComponent {
   readonly categories = CODE_CATEGORIES;
   selectedCategoryId = this.categories[0].id;
-  openSubsectionIndex: number | null = null;
+  openSubsectionIndex: number | null = this.categories[0].subsections.length > 1 ? 0 : null;
 
   get selectedCategory(): CodeCategory {
     return this.categories.find((category) => category.id === this.selectedCategoryId) ?? this.categories[0];
