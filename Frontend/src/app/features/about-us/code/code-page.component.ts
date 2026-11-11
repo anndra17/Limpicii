@@ -12,7 +12,7 @@ import { CODE_CATEGORIES, type CodeCategory } from './code-content.data';
 export class CodePageComponent {
   readonly categories = CODE_CATEGORIES;
   selectedCategoryId = this.categories[0].id;
-  openSubsectionIndex: number | null = this.categories[0].subsections.length > 1 ? 0 : null;
+  openSubsectionIndices = new Set<number>(this.categories[0].subsections.length > 1 ? [0] : []);
 
   get selectedCategory(): CodeCategory {
     return this.categories.find((category) => category.id === this.selectedCategoryId) ?? this.categories[0];
@@ -20,10 +20,16 @@ export class CodePageComponent {
 
   selectCategory(category: CodeCategory): void {
     this.selectedCategoryId = category.id;
-    this.openSubsectionIndex = category.subsections.length > 1 ? 0 : null;
+    this.openSubsectionIndices = new Set(category.subsections.length > 1 ? [0] : []);
   }
 
   toggleSubsection(index: number): void {
-    this.openSubsectionIndex = this.openSubsectionIndex === index ? null : index;
+    const openIndices = new Set(this.openSubsectionIndices);
+    if (openIndices.has(index)) {
+      openIndices.delete(index);
+    } else {
+      openIndices.add(index);
+    }
+    this.openSubsectionIndices = openIndices;
   }
 }
