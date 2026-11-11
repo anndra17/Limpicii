@@ -17,12 +17,12 @@ export const routes: Routes = [
         import('./features/about-us/history/activity-history-page.component')
           .then((module) => module.ActivityHistoryPageComponent)
     },
-    { path: 'rucsacul-limpicului',
+    { path: 'limpicii-backpack',
       loadComponent: () =>
         import('./features/about-us/backpack/backpack-page.component')
           .then((module) => module.BackpackPageComponent)
     },
-    { path: 'codul-limpicului',
+    { path: 'limpicii-code',
       loadComponent: () =>
         import('./features/about-us/code/code-page.component')
           .then((module) => module.CodePageComponent)
