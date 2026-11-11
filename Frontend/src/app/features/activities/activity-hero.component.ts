@@ -12,6 +12,15 @@ const titleKeys: Record<ActivityId, string> = {
   swimming: 'ACTIVITIES.SWIMMING',
 };
 
+const activityIllustrations: Record<ActivityId, string> = {
+  tennis: '/assets/images/activities/tenis_icon-transparent.png',
+  athletics: '/assets/images/activities/athletics_icon-transparent.png',
+  skiing: '/assets/images/activities/ski_icon-transparent.png',
+  fitness: '/assets/images/activities/fitness_icon-transparent.png',
+  hiking: '/assets/images/activities/hike_icon-transparent.png',
+  swimming: '/assets/images/activities/swimming_icon-transparent.png',
+};
+
 const activityImages: Record<ActivityId, string[]> = {
   tennis: [
     '/assets/images/activities/LimpiciiTennis.jpg',
@@ -44,6 +53,7 @@ export class ActivityHeroComponent {
   private readonly translationService = inject(TranslationService);
 
   protected readonly title = computed(() => this.translationService.translate(titleKeys[this.activity()]));
+  protected readonly illustration = computed(() => activityIllustrations[this.activity()]);
   protected readonly activityGallery = computed(() => activityImages[this.activity()]);
   protected readonly labels = computed(() => {
     const translate = (key: string) => this.translationService.translate(`ACTIVITY_PAGES.COMMON.${key}`);
