@@ -81,6 +81,7 @@ export class ActivityHeroComponent {
     const prefix = `ACTIVITY_PAGES.${this.activity().toUpperCase()}`;
     const translate = (key: string) => this.translationService.translate(`${prefix}.${key}`);
     return {
+      eyebrow: translate('EYEBROW'),
       intro: translate('INTRO'),
       description: translate('DESCRIPTION'),
       additionalDescription: translate('ADDITIONAL_DESCRIPTION'),
