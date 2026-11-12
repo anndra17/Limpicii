@@ -1,0 +1,35 @@
+{
+  "tool": "Built-in ImageGen",
+  "assets": [
+    {
+      "sport": "tenis",
+      "file": "C:/Endava/EndevLocal/Limpicii/Frontend/src/assets/images/activities/tenis_icon-branded.png",
+      "prompt": "Use case: precise-object-edit. Edit target: attached tennis illustration. Subtly recolor ONLY lime green shirt to soft muted emerald/teal green (#6cbb99), and pink racket strings/shoe accents to muted coral. Preserve exactly the original woman, face, pose, anatomy, racket, clothing shapes, texture and hand-drawn style. Remove stray edge pixels and background-removal halos. Fully transparent background. Full figure and racket intact, centered tightly with an even small 4% transparent safety margin, no clipping. No added text, new objects, shadows or background. This is subtle palette cleanup, not a redesign. Output a single transparent PNG illustration."
+    },
+    {
+      "sport": "athletics",
+      "file": "C:/Endava/EndevLocal/Limpicii/Frontend/src/assets/images/activities/athletics_icon-branded.png",
+      "prompt": "Use case: precise-object-edit. Edit target: supplied athletics sports illustration for association website. Recolor the neon lime clothing trims and shoes to soft muted emerald green (#6cbb99); change only the pink bib stripe to muted coral. Keep bib number 1004 exact. Preserve exactly original character face, pose, anatomy, equipment, clothing shapes and original illustration style/texture. Only subtle palette harmonization; no redesign. Clean background-removal halos and stray pixels. Fully transparent background with alpha, no opaque backdrop. Keep entire original figure and equipment intact. Center tightly within an even small 4% transparent safety margin on all sides. No clipping, added text, new objects or shadows. Output one transparent PNG."
+    },
+    {
+      "sport": "ski",
+      "file": "C:/Endava/EndevLocal/Limpicii/Frontend/src/assets/images/activities/ski_icon-branded.png",
+      "prompt": "Edit this original ski illustration with EXACTLY ONE change: recolor teal panels of the skier's jacket to muted forest green #458b79. All other pixels, objects, original crisp edges, pose and style stay the same. Transparent alpha background. Absolutely NO glow, NO blur, NO shadow, NO fog, NO halo around the skier or skis or snow. Outside the existing illustration must be 100% transparent. Maintain full original scene including skis, poles and snow swoosh, tightly centered, no clipping."
+    },
+    {
+      "sport": "fitness",
+      "file": "C:/Endava/EndevLocal/Limpicii/Frontend/src/assets/images/activities/fitness_icon-branded.png",
+      "prompt": "Use case: precise-object-edit. Edit target: supplied fitness sports illustration for association website. Recolor neon lime accents to soft muted emerald (#6cbb99), hot pink barbell and belt to muted coral. Keep navy outfit. Preserve exactly original character face, pose, anatomy, equipment, clothing shapes and original illustration style/texture. Only subtle palette harmonization; no redesign. Clean background-removal halos and stray pixels. Fully transparent background with alpha, no opaque backdrop. Keep entire original figure and equipment intact. Center tightly within an even small 4% transparent safety margin on all sides. No clipping, added text, new objects or shadows. Output one transparent PNG."
+    },
+    {
+      "sport": "hike",
+      "file": "C:/Endava/EndevLocal/Limpicii/Frontend/src/assets/images/activities/hike_icon-branded.png",
+      "prompt": "Use case: precise-object-edit. Edit target: supplied hike sports illustration for association website. Recolor only yellow jacket to soft muted emerald green (#6cbb99). Retain earthy boots, shorts, hat and backpack, poles and ground patch. Preserve exactly original character face, pose, anatomy, equipment, clothing shapes and original illustration style/texture. Only subtle palette harmonization; no redesign. Clean background-removal halos and stray pixels. Fully transparent background with alpha, no opaque backdrop. Keep entire original figure and equipment intact. Center tightly within an even small 4% transparent safety margin on all sides. No clipping, added text, new objects or shadows. Output one transparent PNG."
+    },
+    {
+      "sport": "swimming",
+      "file": "C:/Endava/EndevLocal/Limpicii/Frontend/src/assets/images/activities/swimming_icon-branded.png",
+      "prompt": "Use case: precise-object-edit. Edit target: supplied swimming sports illustration for association website. Recolor pink swim cap to soft muted emerald green (#6cbb99), lime goggles to pale mint, purple suit to deep forest teal (#287563); slightly soften cyan water. Preserve exactly original character face, pose, anatomy, equipment, clothing shapes and original illustration style/texture. Only subtle palette harmonization; no redesign. Clean background-removal halos and stray pixels. Fully transparent background with alpha, no opaque backdrop. Keep entire original figure and equipment intact. Center tightly within an even small 4% transparent safety margin on all sides. No clipping, added text, new objects or shadows. Output one transparent PNG."
+    }
+  ]
+}
