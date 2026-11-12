@@ -42,6 +42,16 @@ const activityImages: Record<ActivityId, string[]> = {
   swimming: ['/assets/images/activities/LimpiciiSwimming.jpeg'],
 };
 
+// Replace null entries with image paths when activity photos are available.
+const activityPhotos: Record<ActivityId, (string | null)[]> = {
+  tennis: [null, null, null],
+  athletics: [null, null, null],
+  skiing: [null, null, null],
+  fitness: [null, null, null],
+  hiking: [null, null, null],
+  swimming: [null, null, null],
+};
+
 @Component({
   selector: 'app-activity-hero',
   templateUrl: './activity-hero.component.html',
@@ -55,6 +65,7 @@ export class ActivityHeroComponent {
   protected readonly title = computed(() => this.translationService.translate(titleKeys[this.activity()]));
   protected readonly illustration = computed(() => activityIllustrations[this.activity()]);
   protected readonly activityGallery = computed(() => activityImages[this.activity()]);
+  protected readonly photoSlots = computed(() => activityPhotos[this.activity()]);
   protected readonly labels = computed(() => {
     const translate = (key: string) => this.translationService.translate(`ACTIVITY_PAGES.COMMON.${key}`);
     return {
@@ -62,6 +73,8 @@ export class ActivityHeroComponent {
       trainer: translate('TRAINER'),
       location: translate('LOCATION'),
       extra: translate('EXTRA'),
+      photos: translate('PHOTOS'),
+      photo: translate('PHOTO'),
     };
   });
   protected readonly copy = computed(() => {
